@@ -24,7 +24,8 @@ def get_crawler_driver():
     op.add_argument("--proxy-server='direct://'")
     op.add_argument("--proxy-bypass-list=*")
     op.add_argument("--start-maximized")
-    # op.add_argument("--headless")
+    op.add_argument("--headless")
+    op.add_argument('--user-agent=hogehoge')
     #いつも使っているブラウザを起動する(クッキーをそのまま使用できる)
     driver = webdriver.Chrome(options=op)
     return driver
@@ -135,8 +136,13 @@ class MercariDriver():
             return None
         if item_quantity_text is None:
             return None    
-        item_quantity_blank_position = re.search(" ", item_quantity_text)    
-        item_quantity = item_quantity_text[:item_quantity_blank_position.start()] 
+        item_quantity_blank_position = re.search(" ", item_quantity_text)
+        try:
+            item_quantity = item_quantity_text[:item_quantity_blank_position.start()] 
+        except:
+            print("item_quantityを取得できませんでした。")
+            print("item_quantity_text: ", item_quantity_text)
+            return None      
         if item_quantity == '999+':
             item_quantity = 999
         else:
