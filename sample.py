@@ -5,11 +5,6 @@ import  datetime
 
 def main():
     print(datetime.datetime.now())
-    # try:
-    #     crawler_main(main_url=MERCARI_IT_BOOK_URL, quantity=20, category_id=674, db_name="mercari_db")
-    # except:
-    #     print('Chrome Error')    
-        
     crawler_main(main_url=MERCARI_IT_BOOK_URL, quantity=20, category_id=674, db_name="mercari_db")
 
 

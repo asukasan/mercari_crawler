@@ -136,7 +136,7 @@ class MercariDriver():
             return None
         if item_quantity_text is None:
             return None    
-        item_quantity_blank_position = re.search(" ", item_quantity_text)
+        item_quantity_blank_position = re.search("件", item_quantity_text)
         try:
             item_quantity = item_quantity_text[:item_quantity_blank_position.start()] 
         except:
