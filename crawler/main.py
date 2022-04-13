@@ -81,7 +81,8 @@ def main(main_url, quantity=20, category_id=674, db_name="mercari_db"):
                 profit = item_evaluation["profit"],   
             )
             bargain_item_url = "urasekai.net"
-            notify(bargain_item_url, item_name, item_evaluation["score"], item_evaluation["profit"])
+            if item_evaluation["score"] == 10 and items_crawl_info["sales_rate"] >= 90:
+                notify(bargain_item_url, item_name, item_evaluation["score"], item_evaluation["profit"])
     driver.close()
     driver.quit()
 

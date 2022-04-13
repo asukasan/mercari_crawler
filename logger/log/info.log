@@ -1,0 +1,378 @@
+2022-04-13 09:57:38 selenium.webdriver.remote.remote_connection DEBUG         POST http://localhost:58015/session {"capabilities": {"firstMatch": [{}], "alwaysMatch": {"browserName": "chrome", "pageLoadStrategy": "normal", "goog:chromeOptions": {"extensions": [], "args": ["--disable-gpu", "--disable-extensions", "--proxy-server='direct://'", "--proxy-bypass-list=*", "--start-maximized", "--user-agent=hogehoge"]}}}, "desiredCapabilities": {"browserName": "chrome", "pageLoadStrategy": "normal", "goog:chromeOptions": {"extensions": [], "args": ["--disable-gpu", "--disable-extensions", "--proxy-server='direct://'", "--proxy-bypass-list=*", "--start-maximized", "--user-agent=hogehoge"]}}}
+2022-04-13 09:57:38 urllib3.connectionpool DEBUG         Starting new HTTP connection (1): localhost:58015
+2022-04-13 09:57:49 urllib3.connectionpool DEBUG         http://localhost:58015 "POST /session HTTP/1.1" 200 798
+2022-04-13 09:57:49 selenium.webdriver.remote.remote_connection DEBUG         Finished Request
+2022-04-13 09:57:49 selenium.webdriver.remote.remote_connection DEBUG         POST http://localhost:58015/session/4f927017f58a680146adfc23d658b699/url {"url": "https://jp.mercari.com"}
+2022-04-13 09:57:54 urllib3.connectionpool DEBUG         http://localhost:58015 "POST /session/4f927017f58a680146adfc23d658b699/url HTTP/1.1" 200 14
+2022-04-13 09:57:54 selenium.webdriver.remote.remote_connection DEBUG         Finished Request
+2022-04-13 09:57:54 selenium.webdriver.remote.remote_connection DEBUG         POST http://localhost:58015/session/4f927017f58a680146adfc23d658b699/element {"using": "css selector", "value": "body"}
+2022-04-13 09:57:54 urllib3.connectionpool DEBUG         http://localhost:58015 "POST /session/4f927017f58a680146adfc23d658b699/element HTTP/1.1" 200 88
+2022-04-13 09:57:54 selenium.webdriver.remote.remote_connection DEBUG         Finished Request
+2022-04-13 09:57:57 selenium.webdriver.remote.remote_connection DEBUG         POST http://localhost:58015/session/4f927017f58a680146adfc23d658b699/url {"url": "https://jp.mercari.com/search?category_id=674&t1_category_id=5&t2_category_id=72&t3_category_id=674"}
+2022-04-13 09:58:00 urllib3.connectionpool DEBUG         http://localhost:58015 "POST /session/4f927017f58a680146adfc23d658b699/url HTTP/1.1" 200 14
+2022-04-13 09:58:00 selenium.webdriver.remote.remote_connection DEBUG         Finished Request
+2022-04-13 09:58:00 selenium.webdriver.remote.remote_connection DEBUG         POST http://localhost:58015/session/4f927017f58a680146adfc23d658b699/element {"using": "css selector", "value": "body"}
+2022-04-13 09:58:00 urllib3.connectionpool DEBUG         http://localhost:58015 "POST /session/4f927017f58a680146adfc23d658b699/element HTTP/1.1" 200 88
+2022-04-13 09:58:00 selenium.webdriver.remote.remote_connection DEBUG         Finished Request
+2022-04-13 09:58:04 selenium.webdriver.remote.remote_connection DEBUG         GET http://localhost:58015/session/4f927017f58a680146adfc23d658b699/source {}
+2022-04-13 09:58:04 urllib3.connectionpool DEBUG         http://localhost:58015 "GET /session/4f927017f58a680146adfc23d658b699/source HTTP/1.1" 200 136430
+2022-04-13 09:58:04 selenium.webdriver.remote.remote_connection DEBUG         Finished Request
+2022-04-13 09:58:04 selenium.webdriver.remote.remote_connection DEBUG         DELETE http://localhost:58015/session/4f927017f58a680146adfc23d658b699/window {}
+2022-04-13 09:58:04 urllib3.connectionpool DEBUG         http://localhost:58015 "DELETE /session/4f927017f58a680146adfc23d658b699/window HTTP/1.1" 200 12
+2022-04-13 09:58:04 selenium.webdriver.remote.remote_connection DEBUG         Finished Request
+2022-04-13 09:58:04 selenium.webdriver.remote.remote_connection DEBUG         DELETE http://localhost:58015/session/4f927017f58a680146adfc23d658b699 {}
+2022-04-13 09:58:04 urllib3.connectionpool DEBUG         http://localhost:58015 "DELETE /session/4f927017f58a680146adfc23d658b699 HTTP/1.1" 200 14
+2022-04-13 09:58:04 selenium.webdriver.remote.remote_connection DEBUG         Finished Request
+2022-04-13 09:58:52 selenium.webdriver.remote.remote_connection DEBUG         POST http://localhost:58085/session {"capabilities": {"firstMatch": [{}], "alwaysMatch": {"browserName": "chrome", "pageLoadStrategy": "normal", "goog:chromeOptions": {"extensions": [], "args": ["--disable-gpu", "--disable-extensions", "--proxy-server='direct://'", "--proxy-bypass-list=*", "--start-maximized", "--user-agent=hogehoge"]}}}, "desiredCapabilities": {"browserName": "chrome", "pageLoadStrategy": "normal", "goog:chromeOptions": {"extensions": [], "args": ["--disable-gpu", "--disable-extensions", "--proxy-server='direct://'", "--proxy-bypass-list=*", "--start-maximized", "--user-agent=hogehoge"]}}}
+2022-04-13 09:58:52 urllib3.connectionpool DEBUG         Starting new HTTP connection (1): localhost:58085
+2022-04-13 09:58:54 urllib3.connectionpool DEBUG         http://localhost:58085 "POST /session HTTP/1.1" 200 798
+2022-04-13 09:58:54 selenium.webdriver.remote.remote_connection DEBUG         Finished Request
+2022-04-13 09:58:54 selenium.webdriver.remote.remote_connection DEBUG         POST http://localhost:58085/session/d9bad78efb6eda6530770f7e826cde74/url {"url": "https://jp.mercari.com"}
+2022-04-13 09:58:55 urllib3.connectionpool DEBUG         http://localhost:58085 "POST /session/d9bad78efb6eda6530770f7e826cde74/url HTTP/1.1" 200 14
+2022-04-13 09:58:55 selenium.webdriver.remote.remote_connection DEBUG         Finished Request
+2022-04-13 09:58:55 selenium.webdriver.remote.remote_connection DEBUG         POST http://localhost:58085/session/d9bad78efb6eda6530770f7e826cde74/element {"using": "css selector", "value": "body"}
+2022-04-13 09:58:55 urllib3.connectionpool DEBUG         http://localhost:58085 "POST /session/d9bad78efb6eda6530770f7e826cde74/element HTTP/1.1" 200 88
+2022-04-13 09:58:55 selenium.webdriver.remote.remote_connection DEBUG         Finished Request
+2022-04-13 09:58:59 selenium.webdriver.remote.remote_connection DEBUG         POST http://localhost:58085/session/d9bad78efb6eda6530770f7e826cde74/url {"url": "https://jp.mercari.com/search?category_id=674&t1_category_id=5&t2_category_id=72&t3_category_id=674"}
+2022-04-13 09:59:01 urllib3.connectionpool DEBUG         http://localhost:58085 "POST /session/d9bad78efb6eda6530770f7e826cde74/url HTTP/1.1" 200 14
+2022-04-13 09:59:01 selenium.webdriver.remote.remote_connection DEBUG         Finished Request
+2022-04-13 09:59:01 selenium.webdriver.remote.remote_connection DEBUG         POST http://localhost:58085/session/d9bad78efb6eda6530770f7e826cde74/element {"using": "css selector", "value": "body"}
+2022-04-13 09:59:01 urllib3.connectionpool DEBUG         http://localhost:58085 "POST /session/d9bad78efb6eda6530770f7e826cde74/element HTTP/1.1" 200 88
+2022-04-13 09:59:01 selenium.webdriver.remote.remote_connection DEBUG         Finished Request
+2022-04-13 09:59:04 selenium.webdriver.remote.remote_connection DEBUG         GET http://localhost:58085/session/d9bad78efb6eda6530770f7e826cde74/source {}
+2022-04-13 09:59:06 urllib3.connectionpool DEBUG         http://localhost:58085 "GET /session/d9bad78efb6eda6530770f7e826cde74/source HTTP/1.1" 200 95475
+2022-04-13 09:59:06 selenium.webdriver.remote.remote_connection DEBUG         Finished Request
+2022-04-13 09:59:06 selenium.webdriver.remote.remote_connection DEBUG         DELETE http://localhost:58085/session/d9bad78efb6eda6530770f7e826cde74/window {}
+2022-04-13 09:59:06 urllib3.connectionpool DEBUG         http://localhost:58085 "DELETE /session/d9bad78efb6eda6530770f7e826cde74/window HTTP/1.1" 200 12
+2022-04-13 09:59:06 selenium.webdriver.remote.remote_connection DEBUG         Finished Request
+2022-04-13 09:59:06 selenium.webdriver.remote.remote_connection DEBUG         DELETE http://localhost:58085/session/d9bad78efb6eda6530770f7e826cde74 {}
+2022-04-13 09:59:06 urllib3.connectionpool DEBUG         http://localhost:58085 "DELETE /session/d9bad78efb6eda6530770f7e826cde74 HTTP/1.1" 200 14
+2022-04-13 09:59:06 selenium.webdriver.remote.remote_connection DEBUG         Finished Request
+2022-04-13 10:00:11 selenium.webdriver.remote.remote_connection DEBUG         POST http://localhost:58155/session {"capabilities": {"firstMatch": [{}], "alwaysMatch": {"browserName": "chrome", "pageLoadStrategy": "normal", "goog:chromeOptions": {"extensions": [], "args": ["--disable-gpu", "--disable-extensions", "--proxy-server='direct://'", "--proxy-bypass-list=*", "--start-maximized", "--user-agent=hogehoge"]}}}, "desiredCapabilities": {"browserName": "chrome", "pageLoadStrategy": "normal", "goog:chromeOptions": {"extensions": [], "args": ["--disable-gpu", "--disable-extensions", "--proxy-server='direct://'", "--proxy-bypass-list=*", "--start-maximized", "--user-agent=hogehoge"]}}}
+2022-04-13 10:00:11 urllib3.connectionpool DEBUG         Starting new HTTP connection (1): localhost:58155
+2022-04-13 10:00:13 urllib3.connectionpool DEBUG         http://localhost:58155 "POST /session HTTP/1.1" 200 798
+2022-04-13 10:00:13 selenium.webdriver.remote.remote_connection DEBUG         Finished Request
+2022-04-13 10:00:13 selenium.webdriver.remote.remote_connection DEBUG         POST http://localhost:58155/session/633e378e5a8d6afb74a95fe4e68ded33/url {"url": "https://jp.mercari.com"}
+2022-04-13 10:00:14 urllib3.connectionpool DEBUG         http://localhost:58155 "POST /session/633e378e5a8d6afb74a95fe4e68ded33/url HTTP/1.1" 200 14
+2022-04-13 10:00:14 selenium.webdriver.remote.remote_connection DEBUG         Finished Request
+2022-04-13 10:00:14 selenium.webdriver.remote.remote_connection DEBUG         POST http://localhost:58155/session/633e378e5a8d6afb74a95fe4e68ded33/element {"using": "css selector", "value": "body"}
+2022-04-13 10:00:14 urllib3.connectionpool DEBUG         http://localhost:58155 "POST /session/633e378e5a8d6afb74a95fe4e68ded33/element HTTP/1.1" 200 88
+2022-04-13 10:00:14 selenium.webdriver.remote.remote_connection DEBUG         Finished Request
+2022-04-13 10:00:18 selenium.webdriver.remote.remote_connection DEBUG         POST http://localhost:58155/session/633e378e5a8d6afb74a95fe4e68ded33/url {"url": "https://jp.mercari.com/search?category_id=674&t1_category_id=5&t2_category_id=72&t3_category_id=674"}
+2022-04-13 10:00:18 urllib3.connectionpool DEBUG         http://localhost:58155 "POST /session/633e378e5a8d6afb74a95fe4e68ded33/url HTTP/1.1" 200 14
+2022-04-13 10:00:18 selenium.webdriver.remote.remote_connection DEBUG         Finished Request
+2022-04-13 10:00:18 selenium.webdriver.remote.remote_connection DEBUG         POST http://localhost:58155/session/633e378e5a8d6afb74a95fe4e68ded33/element {"using": "css selector", "value": "body"}
+2022-04-13 10:00:18 urllib3.connectionpool DEBUG         http://localhost:58155 "POST /session/633e378e5a8d6afb74a95fe4e68ded33/element HTTP/1.1" 200 88
+2022-04-13 10:00:18 selenium.webdriver.remote.remote_connection DEBUG         Finished Request
+2022-04-13 10:00:22 selenium.webdriver.remote.remote_connection DEBUG         GET http://localhost:58155/session/633e378e5a8d6afb74a95fe4e68ded33/source {}
+2022-04-13 10:00:22 urllib3.connectionpool DEBUG         http://localhost:58155 "GET /session/633e378e5a8d6afb74a95fe4e68ded33/source HTTP/1.1" 200 140563
+2022-04-13 10:00:22 selenium.webdriver.remote.remote_connection DEBUG         Finished Request
+2022-04-13 10:00:22 selenium.webdriver.remote.remote_connection DEBUG         DELETE http://localhost:58155/session/633e378e5a8d6afb74a95fe4e68ded33/window {}
+2022-04-13 10:00:23 urllib3.connectionpool DEBUG         http://localhost:58155 "DELETE /session/633e378e5a8d6afb74a95fe4e68ded33/window HTTP/1.1" 200 12
+2022-04-13 10:00:23 selenium.webdriver.remote.remote_connection DEBUG         Finished Request
+2022-04-13 10:00:23 selenium.webdriver.remote.remote_connection DEBUG         DELETE http://localhost:58155/session/633e378e5a8d6afb74a95fe4e68ded33 {}
+2022-04-13 10:00:23 urllib3.connectionpool DEBUG         http://localhost:58155 "DELETE /session/633e378e5a8d6afb74a95fe4e68ded33 HTTP/1.1" 200 14
+2022-04-13 10:00:23 selenium.webdriver.remote.remote_connection DEBUG         Finished Request
+2022-04-13 10:03:09 selenium.webdriver.remote.remote_connection DEBUG         POST http://localhost:58228/session {"capabilities": {"firstMatch": [{}], "alwaysMatch": {"browserName": "chrome", "pageLoadStrategy": "normal", "goog:chromeOptions": {"extensions": [], "args": ["--disable-gpu", "--disable-extensions", "--proxy-server='direct://'", "--proxy-bypass-list=*", "--start-maximized", "--user-agent=hogehoge"]}}}, "desiredCapabilities": {"browserName": "chrome", "pageLoadStrategy": "normal", "goog:chromeOptions": {"extensions": [], "args": ["--disable-gpu", "--disable-extensions", "--proxy-server='direct://'", "--proxy-bypass-list=*", "--start-maximized", "--user-agent=hogehoge"]}}}
+2022-04-13 10:03:09 urllib3.connectionpool DEBUG         Starting new HTTP connection (1): localhost:58228
+2022-04-13 10:03:10 urllib3.connectionpool DEBUG         http://localhost:58228 "POST /session HTTP/1.1" 200 798
+2022-04-13 10:03:10 selenium.webdriver.remote.remote_connection DEBUG         Finished Request
+2022-04-13 10:03:10 selenium.webdriver.remote.remote_connection DEBUG         POST http://localhost:58228/session/ac5b9d6981a61138763d3c38475a12fb/url {"url": "https://jp.mercari.com"}
+2022-04-13 10:03:17 urllib3.connectionpool DEBUG         http://localhost:58228 "POST /session/ac5b9d6981a61138763d3c38475a12fb/url HTTP/1.1" 200 14
+2022-04-13 10:03:17 selenium.webdriver.remote.remote_connection DEBUG         Finished Request
+2022-04-13 10:03:17 selenium.webdriver.remote.remote_connection DEBUG         POST http://localhost:58228/session/ac5b9d6981a61138763d3c38475a12fb/element {"using": "css selector", "value": "body"}
+2022-04-13 10:03:17 urllib3.connectionpool DEBUG         http://localhost:58228 "POST /session/ac5b9d6981a61138763d3c38475a12fb/element HTTP/1.1" 200 88
+2022-04-13 10:03:17 selenium.webdriver.remote.remote_connection DEBUG         Finished Request
+2022-04-13 10:03:20 selenium.webdriver.remote.remote_connection DEBUG         POST http://localhost:58228/session/ac5b9d6981a61138763d3c38475a12fb/url {"url": "https://jp.mercari.com/search?category_id=674&t1_category_id=5&t2_category_id=72&t3_category_id=674"}
+2022-04-13 10:03:20 urllib3.connectionpool DEBUG         http://localhost:58228 "POST /session/ac5b9d6981a61138763d3c38475a12fb/url HTTP/1.1" 200 14
+2022-04-13 10:03:20 selenium.webdriver.remote.remote_connection DEBUG         Finished Request
+2022-04-13 10:03:20 selenium.webdriver.remote.remote_connection DEBUG         POST http://localhost:58228/session/ac5b9d6981a61138763d3c38475a12fb/element {"using": "css selector", "value": "body"}
+2022-04-13 10:03:20 urllib3.connectionpool DEBUG         http://localhost:58228 "POST /session/ac5b9d6981a61138763d3c38475a12fb/element HTTP/1.1" 200 88
+2022-04-13 10:03:20 selenium.webdriver.remote.remote_connection DEBUG         Finished Request
+2022-04-13 10:03:24 selenium.webdriver.remote.remote_connection DEBUG         GET http://localhost:58228/session/ac5b9d6981a61138763d3c38475a12fb/source {}
+2022-04-13 10:03:25 urllib3.connectionpool DEBUG         http://localhost:58228 "GET /session/ac5b9d6981a61138763d3c38475a12fb/source HTTP/1.1" 200 95194
+2022-04-13 10:03:25 selenium.webdriver.remote.remote_connection DEBUG         Finished Request
+2022-04-13 10:03:25 selenium.webdriver.remote.remote_connection DEBUG         DELETE http://localhost:58228/session/ac5b9d6981a61138763d3c38475a12fb/window {}
+2022-04-13 10:03:25 urllib3.connectionpool DEBUG         http://localhost:58228 "DELETE /session/ac5b9d6981a61138763d3c38475a12fb/window HTTP/1.1" 200 12
+2022-04-13 10:03:25 selenium.webdriver.remote.remote_connection DEBUG         Finished Request
+2022-04-13 10:03:25 selenium.webdriver.remote.remote_connection DEBUG         DELETE http://localhost:58228/session/ac5b9d6981a61138763d3c38475a12fb {}
+2022-04-13 10:03:25 urllib3.connectionpool DEBUG         http://localhost:58228 "DELETE /session/ac5b9d6981a61138763d3c38475a12fb HTTP/1.1" 200 14
+2022-04-13 10:03:25 selenium.webdriver.remote.remote_connection DEBUG         Finished Request
+2022-04-13 10:04:08 selenium.webdriver.remote.remote_connection DEBUG         POST http://localhost:58293/session {"capabilities": {"firstMatch": [{}], "alwaysMatch": {"browserName": "chrome", "pageLoadStrategy": "normal", "goog:chromeOptions": {"extensions": [], "args": ["--disable-gpu", "--disable-extensions", "--proxy-server='direct://'", "--proxy-bypass-list=*", "--start-maximized", "--user-agent=hogehoge"]}}}, "desiredCapabilities": {"browserName": "chrome", "pageLoadStrategy": "normal", "goog:chromeOptions": {"extensions": [], "args": ["--disable-gpu", "--disable-extensions", "--proxy-server='direct://'", "--proxy-bypass-list=*", "--start-maximized", "--user-agent=hogehoge"]}}}
+2022-04-13 10:04:08 urllib3.connectionpool DEBUG         Starting new HTTP connection (1): localhost:58293
+2022-04-13 10:04:10 urllib3.connectionpool DEBUG         http://localhost:58293 "POST /session HTTP/1.1" 200 798
+2022-04-13 10:04:10 selenium.webdriver.remote.remote_connection DEBUG         Finished Request
+2022-04-13 10:04:10 selenium.webdriver.remote.remote_connection DEBUG         POST http://localhost:58293/session/a6f2908b52fe3eb282aa06ff574b903f/url {"url": "https://jp.mercari.com"}
+2022-04-13 10:04:14 urllib3.connectionpool DEBUG         http://localhost:58293 "POST /session/a6f2908b52fe3eb282aa06ff574b903f/url HTTP/1.1" 200 14
+2022-04-13 10:04:14 selenium.webdriver.remote.remote_connection DEBUG         Finished Request
+2022-04-13 10:04:14 selenium.webdriver.remote.remote_connection DEBUG         POST http://localhost:58293/session/a6f2908b52fe3eb282aa06ff574b903f/element {"using": "css selector", "value": "body"}
+2022-04-13 10:04:14 urllib3.connectionpool DEBUG         http://localhost:58293 "POST /session/a6f2908b52fe3eb282aa06ff574b903f/element HTTP/1.1" 200 88
+2022-04-13 10:04:14 selenium.webdriver.remote.remote_connection DEBUG         Finished Request
+2022-04-13 10:04:17 selenium.webdriver.remote.remote_connection DEBUG         POST http://localhost:58293/session/a6f2908b52fe3eb282aa06ff574b903f/url {"url": "https://jp.mercari.com/search?category_id=674&t1_category_id=5&t2_category_id=72&t3_category_id=674"}
+2022-04-13 10:04:19 urllib3.connectionpool DEBUG         http://localhost:58293 "POST /session/a6f2908b52fe3eb282aa06ff574b903f/url HTTP/1.1" 200 14
+2022-04-13 10:04:19 selenium.webdriver.remote.remote_connection DEBUG         Finished Request
+2022-04-13 10:04:19 selenium.webdriver.remote.remote_connection DEBUG         POST http://localhost:58293/session/a6f2908b52fe3eb282aa06ff574b903f/element {"using": "css selector", "value": "body"}
+2022-04-13 10:04:19 urllib3.connectionpool DEBUG         http://localhost:58293 "POST /session/a6f2908b52fe3eb282aa06ff574b903f/element HTTP/1.1" 200 88
+2022-04-13 10:04:19 selenium.webdriver.remote.remote_connection DEBUG         Finished Request
+2022-04-13 10:04:23 selenium.webdriver.remote.remote_connection DEBUG         GET http://localhost:58293/session/a6f2908b52fe3eb282aa06ff574b903f/source {}
+2022-04-13 10:04:23 urllib3.connectionpool DEBUG         http://localhost:58293 "GET /session/a6f2908b52fe3eb282aa06ff574b903f/source HTTP/1.1" 200 210445
+2022-04-13 10:04:23 selenium.webdriver.remote.remote_connection DEBUG         Finished Request
+2022-04-13 10:04:23 selenium.webdriver.remote.remote_connection DEBUG         POST http://localhost:58293/session/a6f2908b52fe3eb282aa06ff574b903f/url {"url": "https://jp.mercari.com/item/m79738021700\n"}
+2022-04-13 10:04:24 urllib3.connectionpool DEBUG         http://localhost:58293 "POST /session/a6f2908b52fe3eb282aa06ff574b903f/url HTTP/1.1" 200 14
+2022-04-13 10:04:24 selenium.webdriver.remote.remote_connection DEBUG         Finished Request
+2022-04-13 10:04:24 selenium.webdriver.remote.remote_connection DEBUG         POST http://localhost:58293/session/a6f2908b52fe3eb282aa06ff574b903f/element {"using": "css selector", "value": "body"}
+2022-04-13 10:04:24 urllib3.connectionpool DEBUG         http://localhost:58293 "POST /session/a6f2908b52fe3eb282aa06ff574b903f/element HTTP/1.1" 200 88
+2022-04-13 10:04:24 selenium.webdriver.remote.remote_connection DEBUG         Finished Request
+2022-04-13 10:04:27 selenium.webdriver.remote.remote_connection DEBUG         POST http://localhost:58293/session/a6f2908b52fe3eb282aa06ff574b903f/execute/sync {"script": "return document.querySelector('#item-info > section:nth-child(1) > div > mer-heading').shadowRoot.querySelector('div > div > h1').textContent", "args": []}
+2022-04-13 10:04:28 urllib3.connectionpool DEBUG         http://localhost:58293 "POST /session/a6f2908b52fe3eb282aa06ff574b903f/execute/sync HTTP/1.1" 200 68
+2022-04-13 10:04:28 selenium.webdriver.remote.remote_connection DEBUG         Finished Request
+2022-04-13 10:04:28 selenium.webdriver.remote.remote_connection DEBUG         POST http://localhost:58293/session/a6f2908b52fe3eb282aa06ff574b903f/execute/sync {"script": "return document.querySelector('mer-price').shadowRoot.querySelector('span:nth-of-type(2)').textContent", "args": []}
+2022-04-13 10:04:28 urllib3.connectionpool DEBUG         http://localhost:58293 "POST /session/a6f2908b52fe3eb282aa06ff574b903f/execute/sync HTTP/1.1" 200 17
+2022-04-13 10:04:28 selenium.webdriver.remote.remote_connection DEBUG         Finished Request
+2022-04-13 10:04:28 selenium.webdriver.remote.remote_connection DEBUG         POST http://localhost:58293/session/a6f2908b52fe3eb282aa06ff574b903f/url {"url": "https://jp.mercari.com/search?category_id=674&t1_category_id=5&t2_category_id=72&t3_category_id=674&keyword=%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0%E3%81%AE%E3%81%9F%E3%82%81%E3%81%AE%E8%A8%88%E7%AE%97%E6%A9%9F%E7%A7%91%E5%AD%A6%E5%85%A5%E9%96%80%201"}
+2022-04-13 10:04:28 urllib3.connectionpool DEBUG         http://localhost:58293 "POST /session/a6f2908b52fe3eb282aa06ff574b903f/url HTTP/1.1" 200 14
+2022-04-13 10:04:28 selenium.webdriver.remote.remote_connection DEBUG         Finished Request
+2022-04-13 10:04:28 selenium.webdriver.remote.remote_connection DEBUG         POST http://localhost:58293/session/a6f2908b52fe3eb282aa06ff574b903f/element {"using": "css selector", "value": "body"}
+2022-04-13 10:04:28 urllib3.connectionpool DEBUG         http://localhost:58293 "POST /session/a6f2908b52fe3eb282aa06ff574b903f/element HTTP/1.1" 200 88
+2022-04-13 10:04:28 selenium.webdriver.remote.remote_connection DEBUG         Finished Request
+2022-04-13 10:04:32 selenium.webdriver.remote.remote_connection DEBUG         POST http://localhost:58293/session/a6f2908b52fe3eb282aa06ff574b903f/execute/sync {"script": "item_sold_price_list = [];\n        var item_lists =  document.querySelector('#item-grid').querySelectorAll('li > a > mer-item-thumbnail');\n        for (let i = 0; i < item_lists.length; i++) {\n            item_price = item_lists[i].shadowRoot.querySelector('div > figure > div > mer-price');\n            price = item_price.shadowRoot.querySelector('span:nth-of-type(2)').textContent;\n            sold_exist = item_lists[i].shadowRoot.querySelector('div > figure > div:nth-of-type(2)');\n            if (sold_exist !== null){sold = true}else{sold=false}; \n            if (sold){item_sold_price_list.push(price)};\n        }\n        return item_sold_price_list;", "args": []}
+2022-04-13 10:04:32 urllib3.connectionpool DEBUG         http://localhost:58293 "POST /session/a6f2908b52fe3eb282aa06ff574b903f/execute/sync HTTP/1.1" 200 217
+2022-04-13 10:04:32 selenium.webdriver.remote.remote_connection DEBUG         Finished Request
+2022-04-13 10:04:32 selenium.webdriver.remote.remote_connection DEBUG         POST http://localhost:58293/session/a6f2908b52fe3eb282aa06ff574b903f/execute/sync {"script": "var item_lists =  document.querySelector('#item-grid').querySelectorAll('ul >li > a > mer-item-thumbnail');\nvar item_sold_count = 0\nfor (let i = 0; i < item_lists.length; i++) {\n            sold_exist = item_lists[i].shadowRoot.querySelector('div > figure > div:nth-of-type(3)');\n            if (sold_exist !== null){item_sold_count++}; \n        }\nvar sales_rate = Math.round((item_sold_count / item_lists.length) * 100);\nreturn sales_rate        ;\n", "args": []}
+2022-04-13 10:04:32 urllib3.connectionpool DEBUG         http://localhost:58293 "POST /session/a6f2908b52fe3eb282aa06ff574b903f/execute/sync HTTP/1.1" 200 12
+2022-04-13 10:04:32 selenium.webdriver.remote.remote_connection DEBUG         Finished Request
+2022-04-13 10:04:32 selenium.webdriver.remote.remote_connection DEBUG         POST http://localhost:58293/session/a6f2908b52fe3eb282aa06ff574b903f/execute/sync {"script": "return document.querySelector('#search-result > div > div > div > mer-text').textContent", "args": []}
+2022-04-13 10:04:32 urllib3.connectionpool DEBUG         http://localhost:58293 "POST /session/a6f2908b52fe3eb282aa06ff574b903f/execute/sync HTTP/1.1" 200 17
+2022-04-13 10:04:32 selenium.webdriver.remote.remote_connection DEBUG         Finished Request
+2022-04-13 10:04:32 selenium.webdriver.remote.remote_connection DEBUG         POST http://localhost:58293/session/a6f2908b52fe3eb282aa06ff574b903f/url {"url": "https://jp.mercari.com/item/m56984262528\n"}
+2022-04-13 10:04:33 urllib3.connectionpool DEBUG         http://localhost:58293 "POST /session/a6f2908b52fe3eb282aa06ff574b903f/url HTTP/1.1" 200 14
+2022-04-13 10:04:33 selenium.webdriver.remote.remote_connection DEBUG         Finished Request
+2022-04-13 10:04:33 selenium.webdriver.remote.remote_connection DEBUG         POST http://localhost:58293/session/a6f2908b52fe3eb282aa06ff574b903f/element {"using": "css selector", "value": "body"}
+2022-04-13 10:04:33 urllib3.connectionpool DEBUG         http://localhost:58293 "POST /session/a6f2908b52fe3eb282aa06ff574b903f/element HTTP/1.1" 200 88
+2022-04-13 10:04:33 selenium.webdriver.remote.remote_connection DEBUG         Finished Request
+2022-04-13 10:04:36 selenium.webdriver.remote.remote_connection DEBUG         POST http://localhost:58293/session/a6f2908b52fe3eb282aa06ff574b903f/execute/sync {"script": "return document.querySelector('#item-info > section:nth-child(1) > div > mer-heading').shadowRoot.querySelector('div > div > h1').textContent", "args": []}
+2022-04-13 10:04:36 urllib3.connectionpool DEBUG         http://localhost:58293 "POST /session/a6f2908b52fe3eb282aa06ff574b903f/execute/sync HTTP/1.1" 200 39
+2022-04-13 10:04:36 selenium.webdriver.remote.remote_connection DEBUG         Finished Request
+2022-04-13 10:04:36 selenium.webdriver.remote.remote_connection DEBUG         POST http://localhost:58293/session/a6f2908b52fe3eb282aa06ff574b903f/execute/sync {"script": "return document.querySelector('mer-price').shadowRoot.querySelector('span:nth-of-type(2)').textContent", "args": []}
+2022-04-13 10:04:36 urllib3.connectionpool DEBUG         http://localhost:58293 "POST /session/a6f2908b52fe3eb282aa06ff574b903f/execute/sync HTTP/1.1" 200 15
+2022-04-13 10:04:36 selenium.webdriver.remote.remote_connection DEBUG         Finished Request
+2022-04-13 10:04:36 selenium.webdriver.remote.remote_connection DEBUG         POST http://localhost:58293/session/a6f2908b52fe3eb282aa06ff574b903f/url {"url": "https://jp.mercari.com/search?category_id=674&t1_category_id=5&t2_category_id=72&t3_category_id=674&keyword=%E3%81%A7%E3%81%8D%E3%82%8BExcel%E3%83%9E%E3%82%AF%E3%83%AD%26VBA"}
+2022-04-13 10:04:37 urllib3.connectionpool DEBUG         http://localhost:58293 "POST /session/a6f2908b52fe3eb282aa06ff574b903f/url HTTP/1.1" 200 14
+2022-04-13 10:04:37 selenium.webdriver.remote.remote_connection DEBUG         Finished Request
+2022-04-13 10:04:37 selenium.webdriver.remote.remote_connection DEBUG         POST http://localhost:58293/session/a6f2908b52fe3eb282aa06ff574b903f/element {"using": "css selector", "value": "body"}
+2022-04-13 10:04:37 urllib3.connectionpool DEBUG         http://localhost:58293 "POST /session/a6f2908b52fe3eb282aa06ff574b903f/element HTTP/1.1" 200 88
+2022-04-13 10:04:37 selenium.webdriver.remote.remote_connection DEBUG         Finished Request
+2022-04-13 10:04:41 selenium.webdriver.remote.remote_connection DEBUG         POST http://localhost:58293/session/a6f2908b52fe3eb282aa06ff574b903f/execute/sync {"script": "item_sold_price_list = [];\n        var item_lists =  document.querySelector('#item-grid').querySelectorAll('li > a > mer-item-thumbnail');\n        for (let i = 0; i < item_lists.length; i++) {\n            item_price = item_lists[i].shadowRoot.querySelector('div > figure > div > mer-price');\n            price = item_price.shadowRoot.querySelector('span:nth-of-type(2)').textContent;\n            sold_exist = item_lists[i].shadowRoot.querySelector('div > figure > div:nth-of-type(2)');\n            if (sold_exist !== null){sold = true}else{sold=false}; \n            if (sold){item_sold_price_list.push(price)};\n        }\n        return item_sold_price_list;", "args": []}
+2022-04-13 10:04:41 urllib3.connectionpool DEBUG         http://localhost:58293 "POST /session/a6f2908b52fe3eb282aa06ff574b903f/execute/sync HTTP/1.1" 200 779
+2022-04-13 10:04:41 selenium.webdriver.remote.remote_connection DEBUG         Finished Request
+2022-04-13 10:04:41 selenium.webdriver.remote.remote_connection DEBUG         POST http://localhost:58293/session/a6f2908b52fe3eb282aa06ff574b903f/execute/sync {"script": "var item_lists =  document.querySelector('#item-grid').querySelectorAll('ul >li > a > mer-item-thumbnail');\nvar item_sold_count = 0\nfor (let i = 0; i < item_lists.length; i++) {\n            sold_exist = item_lists[i].shadowRoot.querySelector('div > figure > div:nth-of-type(3)');\n            if (sold_exist !== null){item_sold_count++}; \n        }\nvar sales_rate = Math.round((item_sold_count / item_lists.length) * 100);\nreturn sales_rate        ;\n", "args": []}
+2022-04-13 10:04:41 urllib3.connectionpool DEBUG         http://localhost:58293 "POST /session/a6f2908b52fe3eb282aa06ff574b903f/execute/sync HTTP/1.1" 200 12
+2022-04-13 10:04:41 selenium.webdriver.remote.remote_connection DEBUG         Finished Request
+2022-04-13 10:04:41 selenium.webdriver.remote.remote_connection DEBUG         POST http://localhost:58293/session/a6f2908b52fe3eb282aa06ff574b903f/execute/sync {"script": "return document.querySelector('#search-result > div > div > div > mer-text').textContent", "args": []}
+2022-04-13 10:04:41 urllib3.connectionpool DEBUG         http://localhost:58293 "POST /session/a6f2908b52fe3eb282aa06ff574b903f/execute/sync HTTP/1.1" 200 18
+2022-04-13 10:04:41 selenium.webdriver.remote.remote_connection DEBUG         Finished Request
+2022-04-13 10:04:41 selenium.webdriver.remote.remote_connection DEBUG         POST http://localhost:58293/session/a6f2908b52fe3eb282aa06ff574b903f/url {"url": "https://jp.mercari.com/item/m13101783923\n"}
+2022-04-13 10:04:41 urllib3.connectionpool DEBUG         http://localhost:58293 "POST /session/a6f2908b52fe3eb282aa06ff574b903f/url HTTP/1.1" 200 14
+2022-04-13 10:04:41 selenium.webdriver.remote.remote_connection DEBUG         Finished Request
+2022-04-13 10:04:41 selenium.webdriver.remote.remote_connection DEBUG         POST http://localhost:58293/session/a6f2908b52fe3eb282aa06ff574b903f/element {"using": "css selector", "value": "body"}
+2022-04-13 10:04:41 urllib3.connectionpool DEBUG         http://localhost:58293 "POST /session/a6f2908b52fe3eb282aa06ff574b903f/element HTTP/1.1" 200 88
+2022-04-13 10:04:41 selenium.webdriver.remote.remote_connection DEBUG         Finished Request
+2022-04-13 10:04:45 selenium.webdriver.remote.remote_connection DEBUG         POST http://localhost:58293/session/a6f2908b52fe3eb282aa06ff574b903f/execute/sync {"script": "return document.querySelector('#item-info > section:nth-child(1) > div > mer-heading').shadowRoot.querySelector('div > div > h1').textContent", "args": []}
+2022-04-13 10:04:45 urllib3.connectionpool DEBUG         http://localhost:58293 "POST /session/a6f2908b52fe3eb282aa06ff574b903f/execute/sync HTTP/1.1" 200 60
+2022-04-13 10:04:45 selenium.webdriver.remote.remote_connection DEBUG         Finished Request
+2022-04-13 10:04:45 selenium.webdriver.remote.remote_connection DEBUG         POST http://localhost:58293/session/a6f2908b52fe3eb282aa06ff574b903f/execute/sync {"script": "return document.querySelector('mer-price').shadowRoot.querySelector('span:nth-of-type(2)').textContent", "args": []}
+2022-04-13 10:04:45 urllib3.connectionpool DEBUG         http://localhost:58293 "POST /session/a6f2908b52fe3eb282aa06ff574b903f/execute/sync HTTP/1.1" 200 15
+2022-04-13 10:04:45 selenium.webdriver.remote.remote_connection DEBUG         Finished Request
+2022-04-13 10:04:45 selenium.webdriver.remote.remote_connection DEBUG         POST http://localhost:58293/session/a6f2908b52fe3eb282aa06ff574b903f/url {"url": "https://jp.mercari.com/search?category_id=674&t1_category_id=5&t2_category_id=72&t3_category_id=674&keyword=30%E6%99%82%E9%96%93%E3%81%A7%E3%83%9E%E3%82%B9%E3%82%BF%E3%83%BC%20Word2019%20Windows10%E5%AF%BE%E5%BF%9C"}
+2022-04-13 10:04:46 urllib3.connectionpool DEBUG         http://localhost:58293 "POST /session/a6f2908b52fe3eb282aa06ff574b903f/url HTTP/1.1" 200 14
+2022-04-13 10:04:46 selenium.webdriver.remote.remote_connection DEBUG         Finished Request
+2022-04-13 10:04:46 selenium.webdriver.remote.remote_connection DEBUG         POST http://localhost:58293/session/a6f2908b52fe3eb282aa06ff574b903f/element {"using": "css selector", "value": "body"}
+2022-04-13 10:04:46 urllib3.connectionpool DEBUG         http://localhost:58293 "POST /session/a6f2908b52fe3eb282aa06ff574b903f/element HTTP/1.1" 200 88
+2022-04-13 10:04:46 selenium.webdriver.remote.remote_connection DEBUG         Finished Request
+2022-04-13 10:04:50 selenium.webdriver.remote.remote_connection DEBUG         POST http://localhost:58293/session/a6f2908b52fe3eb282aa06ff574b903f/execute/sync {"script": "item_sold_price_list = [];\n        var item_lists =  document.querySelector('#item-grid').querySelectorAll('li > a > mer-item-thumbnail');\n        for (let i = 0; i < item_lists.length; i++) {\n            item_price = item_lists[i].shadowRoot.querySelector('div > figure > div > mer-price');\n            price = item_price.shadowRoot.querySelector('span:nth-of-type(2)').textContent;\n            sold_exist = item_lists[i].shadowRoot.querySelector('div > figure > div:nth-of-type(2)');\n            if (sold_exist !== null){sold = true}else{sold=false}; \n            if (sold){item_sold_price_list.push(price)};\n        }\n        return item_sold_price_list;", "args": []}
+2022-04-13 10:04:50 urllib3.connectionpool DEBUG         http://localhost:58293 "POST /session/a6f2908b52fe3eb282aa06ff574b903f/execute/sync HTTP/1.1" 200 719
+2022-04-13 10:04:50 selenium.webdriver.remote.remote_connection DEBUG         Finished Request
+2022-04-13 10:04:50 selenium.webdriver.remote.remote_connection DEBUG         POST http://localhost:58293/session/a6f2908b52fe3eb282aa06ff574b903f/execute/sync {"script": "var item_lists =  document.querySelector('#item-grid').querySelectorAll('ul >li > a > mer-item-thumbnail');\nvar item_sold_count = 0\nfor (let i = 0; i < item_lists.length; i++) {\n            sold_exist = item_lists[i].shadowRoot.querySelector('div > figure > div:nth-of-type(3)');\n            if (sold_exist !== null){item_sold_count++}; \n        }\nvar sales_rate = Math.round((item_sold_count / item_lists.length) * 100);\nreturn sales_rate        ;\n", "args": []}
+2022-04-13 10:04:50 urllib3.connectionpool DEBUG         http://localhost:58293 "POST /session/a6f2908b52fe3eb282aa06ff574b903f/execute/sync HTTP/1.1" 200 12
+2022-04-13 10:04:50 selenium.webdriver.remote.remote_connection DEBUG         Finished Request
+2022-04-13 10:04:50 selenium.webdriver.remote.remote_connection DEBUG         POST http://localhost:58293/session/a6f2908b52fe3eb282aa06ff574b903f/execute/sync {"script": "return document.querySelector('#search-result > div > div > div > mer-text').textContent", "args": []}
+2022-04-13 10:04:50 urllib3.connectionpool DEBUG         http://localhost:58293 "POST /session/a6f2908b52fe3eb282aa06ff574b903f/execute/sync HTTP/1.1" 200 18
+2022-04-13 10:04:50 selenium.webdriver.remote.remote_connection DEBUG         Finished Request
+2022-04-13 10:04:50 selenium.webdriver.remote.remote_connection DEBUG         POST http://localhost:58293/session/a6f2908b52fe3eb282aa06ff574b903f/url {"url": "https://jp.mercari.com/item/m10777597043\n"}
+2022-04-13 10:04:50 urllib3.connectionpool DEBUG         http://localhost:58293 "POST /session/a6f2908b52fe3eb282aa06ff574b903f/url HTTP/1.1" 200 14
+2022-04-13 10:04:50 selenium.webdriver.remote.remote_connection DEBUG         Finished Request
+2022-04-13 10:04:50 selenium.webdriver.remote.remote_connection DEBUG         POST http://localhost:58293/session/a6f2908b52fe3eb282aa06ff574b903f/element {"using": "css selector", "value": "body"}
+2022-04-13 10:04:50 urllib3.connectionpool DEBUG         http://localhost:58293 "POST /session/a6f2908b52fe3eb282aa06ff574b903f/element HTTP/1.1" 200 88
+2022-04-13 10:04:50 selenium.webdriver.remote.remote_connection DEBUG         Finished Request
+2022-04-13 10:04:54 selenium.webdriver.remote.remote_connection DEBUG         POST http://localhost:58293/session/a6f2908b52fe3eb282aa06ff574b903f/execute/sync {"script": "return document.querySelector('#item-info > section:nth-child(1) > div > mer-heading').shadowRoot.querySelector('div > div > h1').textContent", "args": []}
+2022-04-13 10:04:54 urllib3.connectionpool DEBUG         http://localhost:58293 "POST /session/a6f2908b52fe3eb282aa06ff574b903f/execute/sync HTTP/1.1" 200 96
+2022-04-13 10:04:54 selenium.webdriver.remote.remote_connection DEBUG         Finished Request
+2022-04-13 10:04:54 selenium.webdriver.remote.remote_connection DEBUG         POST http://localhost:58293/session/a6f2908b52fe3eb282aa06ff574b903f/execute/sync {"script": "return document.querySelector('mer-price').shadowRoot.querySelector('span:nth-of-type(2)').textContent", "args": []}
+2022-04-13 10:04:54 urllib3.connectionpool DEBUG         http://localhost:58293 "POST /session/a6f2908b52fe3eb282aa06ff574b903f/execute/sync HTTP/1.1" 200 17
+2022-04-13 10:04:54 selenium.webdriver.remote.remote_connection DEBUG         Finished Request
+2022-04-13 10:04:54 selenium.webdriver.remote.remote_connection DEBUG         POST http://localhost:58293/session/a6f2908b52fe3eb282aa06ff574b903f/url {"url": "https://jp.mercari.com/search?category_id=674&t1_category_id=5&t2_category_id=72&t3_category_id=674&keyword=3%E6%AC%A1%E5%85%83CAD%E3%81%AB%E3%82%88%E3%82%8B%E6%89%8B%E5%B7%BB%E3%82%A6%E3%82%A4%E3%83%B3%E3%83%81%E3%81%AE%E8%A8%AD%E8%A8%88%20%3A%20SolidWorks%E3%81%AB%E3%82%88%E3%82%8B3%E6%AC%A1%E5%85%83%E3%83%A2%E3%83%87%E2%80%A6"}
+2022-04-13 10:04:54 urllib3.connectionpool DEBUG         http://localhost:58293 "POST /session/a6f2908b52fe3eb282aa06ff574b903f/url HTTP/1.1" 200 14
+2022-04-13 10:04:54 selenium.webdriver.remote.remote_connection DEBUG         Finished Request
+2022-04-13 10:04:54 selenium.webdriver.remote.remote_connection DEBUG         POST http://localhost:58293/session/a6f2908b52fe3eb282aa06ff574b903f/element {"using": "css selector", "value": "body"}
+2022-04-13 10:04:54 urllib3.connectionpool DEBUG         http://localhost:58293 "POST /session/a6f2908b52fe3eb282aa06ff574b903f/element HTTP/1.1" 200 88
+2022-04-13 10:04:54 selenium.webdriver.remote.remote_connection DEBUG         Finished Request
+2022-04-13 10:04:57 selenium.webdriver.remote.remote_connection DEBUG         POST http://localhost:58293/session/a6f2908b52fe3eb282aa06ff574b903f/execute/sync {"script": "item_sold_price_list = [];\n        var item_lists =  document.querySelector('#item-grid').querySelectorAll('li > a > mer-item-thumbnail');\n        for (let i = 0; i < item_lists.length; i++) {\n            item_price = item_lists[i].shadowRoot.querySelector('div > figure > div > mer-price');\n            price = item_price.shadowRoot.querySelector('span:nth-of-type(2)').textContent;\n            sold_exist = item_lists[i].shadowRoot.querySelector('div > figure > div:nth-of-type(2)');\n            if (sold_exist !== null){sold = true}else{sold=false}; \n            if (sold){item_sold_price_list.push(price)};\n        }\n        return item_sold_price_list;", "args": []}
+2022-04-13 10:04:57 urllib3.connectionpool DEBUG         http://localhost:58293 "POST /session/a6f2908b52fe3eb282aa06ff574b903f/execute/sync HTTP/1.1" 500 1993
+2022-04-13 10:04:57 selenium.webdriver.remote.remote_connection DEBUG         Finished Request
+2022-04-13 10:06:35 selenium.webdriver.remote.remote_connection DEBUG         POST http://localhost:58416/session {"capabilities": {"firstMatch": [{}], "alwaysMatch": {"browserName": "chrome", "pageLoadStrategy": "normal", "goog:chromeOptions": {"extensions": [], "args": ["--disable-gpu", "--disable-extensions", "--proxy-server='direct://'", "--proxy-bypass-list=*", "--start-maximized", "--user-agent=hogehoge"]}}}, "desiredCapabilities": {"browserName": "chrome", "pageLoadStrategy": "normal", "goog:chromeOptions": {"extensions": [], "args": ["--disable-gpu", "--disable-extensions", "--proxy-server='direct://'", "--proxy-bypass-list=*", "--start-maximized", "--user-agent=hogehoge"]}}}
+2022-04-13 10:06:35 urllib3.connectionpool DEBUG         Starting new HTTP connection (1): localhost:58416
+2022-04-13 10:06:37 urllib3.connectionpool DEBUG         http://localhost:58416 "POST /session HTTP/1.1" 200 798
+2022-04-13 10:06:37 selenium.webdriver.remote.remote_connection DEBUG         Finished Request
+2022-04-13 10:06:37 selenium.webdriver.remote.remote_connection DEBUG         POST http://localhost:58416/session/75d04cd4663753ed701c3cd60e2eccdf/url {"url": "https://jp.mercari.com"}
+2022-04-13 10:06:40 urllib3.connectionpool DEBUG         http://localhost:58416 "POST /session/75d04cd4663753ed701c3cd60e2eccdf/url HTTP/1.1" 200 14
+2022-04-13 10:06:40 selenium.webdriver.remote.remote_connection DEBUG         Finished Request
+2022-04-13 10:06:40 selenium.webdriver.remote.remote_connection DEBUG         POST http://localhost:58416/session/75d04cd4663753ed701c3cd60e2eccdf/element {"using": "css selector", "value": "body"}
+2022-04-13 10:06:40 urllib3.connectionpool DEBUG         http://localhost:58416 "POST /session/75d04cd4663753ed701c3cd60e2eccdf/element HTTP/1.1" 200 88
+2022-04-13 10:06:40 selenium.webdriver.remote.remote_connection DEBUG         Finished Request
+2022-04-13 10:06:43 selenium.webdriver.remote.remote_connection DEBUG         POST http://localhost:58416/session/75d04cd4663753ed701c3cd60e2eccdf/url {"url": "https://jp.mercari.com/search?category_id=674&t1_category_id=5&t2_category_id=72&t3_category_id=674"}
+2022-04-13 10:06:44 urllib3.connectionpool DEBUG         http://localhost:58416 "POST /session/75d04cd4663753ed701c3cd60e2eccdf/url HTTP/1.1" 200 14
+2022-04-13 10:06:44 selenium.webdriver.remote.remote_connection DEBUG         Finished Request
+2022-04-13 10:06:44 selenium.webdriver.remote.remote_connection DEBUG         POST http://localhost:58416/session/75d04cd4663753ed701c3cd60e2eccdf/element {"using": "css selector", "value": "body"}
+2022-04-13 10:06:44 urllib3.connectionpool DEBUG         http://localhost:58416 "POST /session/75d04cd4663753ed701c3cd60e2eccdf/element HTTP/1.1" 200 88
+2022-04-13 10:06:44 selenium.webdriver.remote.remote_connection DEBUG         Finished Request
+2022-04-13 10:06:47 selenium.webdriver.remote.remote_connection DEBUG         GET http://localhost:58416/session/75d04cd4663753ed701c3cd60e2eccdf/source {}
+2022-04-13 10:06:48 urllib3.connectionpool DEBUG         http://localhost:58416 "GET /session/75d04cd4663753ed701c3cd60e2eccdf/source HTTP/1.1" 200 166371
+2022-04-13 10:06:48 selenium.webdriver.remote.remote_connection DEBUG         Finished Request
+2022-04-13 10:06:48 selenium.webdriver.remote.remote_connection DEBUG         POST http://localhost:58416/session/75d04cd4663753ed701c3cd60e2eccdf/url {"url": "https://jp.mercari.com/item/m47216580061\n"}
+2022-04-13 10:06:48 urllib3.connectionpool DEBUG         http://localhost:58416 "POST /session/75d04cd4663753ed701c3cd60e2eccdf/url HTTP/1.1" 200 14
+2022-04-13 10:06:48 selenium.webdriver.remote.remote_connection DEBUG         Finished Request
+2022-04-13 10:06:48 selenium.webdriver.remote.remote_connection DEBUG         POST http://localhost:58416/session/75d04cd4663753ed701c3cd60e2eccdf/element {"using": "css selector", "value": "body"}
+2022-04-13 10:06:49 urllib3.connectionpool DEBUG         http://localhost:58416 "POST /session/75d04cd4663753ed701c3cd60e2eccdf/element HTTP/1.1" 200 88
+2022-04-13 10:06:49 selenium.webdriver.remote.remote_connection DEBUG         Finished Request
+2022-04-13 10:06:52 selenium.webdriver.remote.remote_connection DEBUG         POST http://localhost:58416/session/75d04cd4663753ed701c3cd60e2eccdf/execute/sync {"script": "return document.querySelector('#item-info > section:nth-child(1) > div > mer-heading').shadowRoot.querySelector('div > div > h1').textContent", "args": []}
+2022-04-13 10:06:52 urllib3.connectionpool DEBUG         http://localhost:58416 "POST /session/75d04cd4663753ed701c3cd60e2eccdf/execute/sync HTTP/1.1" 500 1987
+2022-04-13 10:06:52 selenium.webdriver.remote.remote_connection DEBUG         Finished Request
+2022-04-13 10:06:52 mercari_driver  ERROR         nameとpriceを取得できませんでした。
+2022-04-13 10:06:52 mercari_driver  ERROR         None
+2022-04-13 10:06:52 selenium.webdriver.remote.remote_connection DEBUG         POST http://localhost:58416/session/75d04cd4663753ed701c3cd60e2eccdf/url {"url": "https://jp.mercari.com/item/m52318869386\n"}
+2022-04-13 10:06:52 urllib3.connectionpool DEBUG         http://localhost:58416 "POST /session/75d04cd4663753ed701c3cd60e2eccdf/url HTTP/1.1" 200 14
+2022-04-13 10:06:52 selenium.webdriver.remote.remote_connection DEBUG         Finished Request
+2022-04-13 10:06:52 selenium.webdriver.remote.remote_connection DEBUG         POST http://localhost:58416/session/75d04cd4663753ed701c3cd60e2eccdf/element {"using": "css selector", "value": "body"}
+2022-04-13 10:06:53 urllib3.connectionpool DEBUG         http://localhost:58416 "POST /session/75d04cd4663753ed701c3cd60e2eccdf/element HTTP/1.1" 200 88
+2022-04-13 10:06:53 selenium.webdriver.remote.remote_connection DEBUG         Finished Request
+2022-04-13 10:06:56 selenium.webdriver.remote.remote_connection DEBUG         POST http://localhost:58416/session/75d04cd4663753ed701c3cd60e2eccdf/execute/sync {"script": "return document.querySelector('#item-info > section:nth-child(1) > div > mer-heading').shadowRoot.querySelector('div > div > h1').textContent", "args": []}
+2022-04-13 10:06:56 urllib3.connectionpool DEBUG         http://localhost:58416 "POST /session/75d04cd4663753ed701c3cd60e2eccdf/execute/sync HTTP/1.1" 200 72
+2022-04-13 10:06:56 selenium.webdriver.remote.remote_connection DEBUG         Finished Request
+2022-04-13 10:06:56 selenium.webdriver.remote.remote_connection DEBUG         POST http://localhost:58416/session/75d04cd4663753ed701c3cd60e2eccdf/execute/sync {"script": "return document.querySelector('mer-price').shadowRoot.querySelector('span:nth-of-type(2)').textContent", "args": []}
+2022-04-13 10:06:56 urllib3.connectionpool DEBUG         http://localhost:58416 "POST /session/75d04cd4663753ed701c3cd60e2eccdf/execute/sync HTTP/1.1" 200 17
+2022-04-13 10:06:56 selenium.webdriver.remote.remote_connection DEBUG         Finished Request
+2022-04-13 10:06:57 selenium.webdriver.remote.remote_connection DEBUG         POST http://localhost:58416/session/75d04cd4663753ed701c3cd60e2eccdf/url {"url": "https://jp.mercari.com/search?category_id=674&t1_category_id=5&t2_category_id=72&t3_category_id=674&keyword=MOS%20Microsoft%20Word%202013%E5%AF%BE%E7%AD%96%E3%83%86%E3%82%AD%E3%82%B9%E3%83%88%26%E5%95%8F%E9%A1%8C%E9%9B%86%20Micro%E2%80%A6"}
+2022-04-13 10:06:57 urllib3.connectionpool DEBUG         http://localhost:58416 "POST /session/75d04cd4663753ed701c3cd60e2eccdf/url HTTP/1.1" 200 14
+2022-04-13 10:06:57 selenium.webdriver.remote.remote_connection DEBUG         Finished Request
+2022-04-13 10:06:57 selenium.webdriver.remote.remote_connection DEBUG         POST http://localhost:58416/session/75d04cd4663753ed701c3cd60e2eccdf/element {"using": "css selector", "value": "body"}
+2022-04-13 10:06:57 urllib3.connectionpool DEBUG         http://localhost:58416 "POST /session/75d04cd4663753ed701c3cd60e2eccdf/element HTTP/1.1" 200 88
+2022-04-13 10:06:57 selenium.webdriver.remote.remote_connection DEBUG         Finished Request
+2022-04-13 10:07:01 selenium.webdriver.remote.remote_connection DEBUG         POST http://localhost:58416/session/75d04cd4663753ed701c3cd60e2eccdf/execute/sync {"script": "item_sold_price_list = [];\n        var item_lists =  document.querySelector('#item-grid').querySelectorAll('li > a > mer-item-thumbnail');\n        for (let i = 0; i < item_lists.length; i++) {\n            item_price = item_lists[i].shadowRoot.querySelector('div > figure > div > mer-price');\n            price = item_price.shadowRoot.querySelector('span:nth-of-type(2)').textContent;\n            sold_exist = item_lists[i].shadowRoot.querySelector('div > figure > div:nth-of-type(2)');\n            if (sold_exist !== null){sold = true}else{sold=false}; \n            if (sold){item_sold_price_list.push(price)};\n        }\n        return item_sold_price_list;", "args": []}
+2022-04-13 10:07:01 urllib3.connectionpool DEBUG         http://localhost:58416 "POST /session/75d04cd4663753ed701c3cd60e2eccdf/execute/sync HTTP/1.1" 200 783
+2022-04-13 10:07:01 selenium.webdriver.remote.remote_connection DEBUG         Finished Request
+2022-04-13 10:07:01 selenium.webdriver.remote.remote_connection DEBUG         POST http://localhost:58416/session/75d04cd4663753ed701c3cd60e2eccdf/execute/sync {"script": "var item_lists =  document.querySelector('#item-grid').querySelectorAll('ul >li > a > mer-item-thumbnail');\nvar item_sold_count = 0\nfor (let i = 0; i < item_lists.length; i++) {\n            sold_exist = item_lists[i].shadowRoot.querySelector('div > figure > div:nth-of-type(3)');\n            if (sold_exist !== null){item_sold_count++}; \n        }\nvar sales_rate = Math.round((item_sold_count / item_lists.length) * 100);\nreturn sales_rate        ;\n", "args": []}
+2022-04-13 10:07:01 urllib3.connectionpool DEBUG         http://localhost:58416 "POST /session/75d04cd4663753ed701c3cd60e2eccdf/execute/sync HTTP/1.1" 200 12
+2022-04-13 10:07:01 selenium.webdriver.remote.remote_connection DEBUG         Finished Request
+2022-04-13 10:07:01 selenium.webdriver.remote.remote_connection DEBUG         POST http://localhost:58416/session/75d04cd4663753ed701c3cd60e2eccdf/execute/sync {"script": "return document.querySelector('#search-result > div > div > div > mer-text').textContent", "args": []}
+2022-04-13 10:07:01 urllib3.connectionpool DEBUG         http://localhost:58416 "POST /session/75d04cd4663753ed701c3cd60e2eccdf/execute/sync HTTP/1.1" 200 18
+2022-04-13 10:07:01 selenium.webdriver.remote.remote_connection DEBUG         Finished Request
+2022-04-13 10:07:01 selenium.webdriver.remote.remote_connection DEBUG         POST http://localhost:58416/session/75d04cd4663753ed701c3cd60e2eccdf/url {"url": "https://jp.mercari.com/item/m69203496822\n"}
+2022-04-13 10:07:02 urllib3.connectionpool DEBUG         http://localhost:58416 "POST /session/75d04cd4663753ed701c3cd60e2eccdf/url HTTP/1.1" 200 14
+2022-04-13 10:07:02 selenium.webdriver.remote.remote_connection DEBUG         Finished Request
+2022-04-13 10:07:02 selenium.webdriver.remote.remote_connection DEBUG         POST http://localhost:58416/session/75d04cd4663753ed701c3cd60e2eccdf/element {"using": "css selector", "value": "body"}
+2022-04-13 10:07:02 urllib3.connectionpool DEBUG         http://localhost:58416 "POST /session/75d04cd4663753ed701c3cd60e2eccdf/element HTTP/1.1" 200 88
+2022-04-13 10:07:02 selenium.webdriver.remote.remote_connection DEBUG         Finished Request
+2022-04-13 10:07:05 selenium.webdriver.remote.remote_connection DEBUG         POST http://localhost:58416/session/75d04cd4663753ed701c3cd60e2eccdf/execute/sync {"script": "return document.querySelector('#item-info > section:nth-child(1) > div > mer-heading').shadowRoot.querySelector('div > div > h1').textContent", "args": []}
+2022-04-13 10:07:06 urllib3.connectionpool DEBUG         http://localhost:58416 "POST /session/75d04cd4663753ed701c3cd60e2eccdf/execute/sync HTTP/1.1" 200 25
+2022-04-13 10:07:06 selenium.webdriver.remote.remote_connection DEBUG         Finished Request
+2022-04-13 10:07:06 selenium.webdriver.remote.remote_connection DEBUG         POST http://localhost:58416/session/75d04cd4663753ed701c3cd60e2eccdf/execute/sync {"script": "return document.querySelector('mer-price').shadowRoot.querySelector('span:nth-of-type(2)').textContent", "args": []}
+2022-04-13 10:07:06 urllib3.connectionpool DEBUG         http://localhost:58416 "POST /session/75d04cd4663753ed701c3cd60e2eccdf/execute/sync HTTP/1.1" 200 17
+2022-04-13 10:07:06 selenium.webdriver.remote.remote_connection DEBUG         Finished Request
+2022-04-13 10:07:06 selenium.webdriver.remote.remote_connection DEBUG         POST http://localhost:58416/session/75d04cd4663753ed701c3cd60e2eccdf/url {"url": "https://jp.mercari.com/search?category_id=674&t1_category_id=5&t2_category_id=72&t3_category_id=674&keyword=%E3%82%84%E3%81%95%E3%81%97%E3%81%84C"}
+2022-04-13 10:07:06 urllib3.connectionpool DEBUG         http://localhost:58416 "POST /session/75d04cd4663753ed701c3cd60e2eccdf/url HTTP/1.1" 200 14
+2022-04-13 10:07:06 selenium.webdriver.remote.remote_connection DEBUG         Finished Request
+2022-04-13 10:07:06 selenium.webdriver.remote.remote_connection DEBUG         POST http://localhost:58416/session/75d04cd4663753ed701c3cd60e2eccdf/element {"using": "css selector", "value": "body"}
+2022-04-13 10:07:06 urllib3.connectionpool DEBUG         http://localhost:58416 "POST /session/75d04cd4663753ed701c3cd60e2eccdf/element HTTP/1.1" 200 88
+2022-04-13 10:07:06 selenium.webdriver.remote.remote_connection DEBUG         Finished Request
+2022-04-13 10:07:09 selenium.webdriver.remote.remote_connection DEBUG         POST http://localhost:58416/session/75d04cd4663753ed701c3cd60e2eccdf/execute/sync {"script": "item_sold_price_list = [];\n        var item_lists =  document.querySelector('#item-grid').querySelectorAll('li > a > mer-item-thumbnail');\n        for (let i = 0; i < item_lists.length; i++) {\n            item_price = item_lists[i].shadowRoot.querySelector('div > figure > div > mer-price');\n            price = item_price.shadowRoot.querySelector('span:nth-of-type(2)').textContent;\n            sold_exist = item_lists[i].shadowRoot.querySelector('div > figure > div:nth-of-type(2)');\n            if (sold_exist !== null){sold = true}else{sold=false}; \n            if (sold){item_sold_price_list.push(price)};\n        }\n        return item_sold_price_list;", "args": []}
+2022-04-13 10:07:09 urllib3.connectionpool DEBUG         http://localhost:58416 "POST /session/75d04cd4663753ed701c3cd60e2eccdf/execute/sync HTTP/1.1" 500 1993
+2022-04-13 10:07:09 selenium.webdriver.remote.remote_connection DEBUG         Finished Request
+2022-04-13 10:07:09 mercari_driver  ERROR         priceを取得できませんでした。
+2022-04-13 10:07:09 mercari_driver  ERROR         None
+2022-04-13 10:07:09 selenium.webdriver.remote.remote_connection DEBUG         POST http://localhost:58416/session/75d04cd4663753ed701c3cd60e2eccdf/execute/sync {"script": "var item_lists =  document.querySelector('#item-grid').querySelectorAll('ul >li > a > mer-item-thumbnail');\nvar item_sold_count = 0\nfor (let i = 0; i < item_lists.length; i++) {\n            sold_exist = item_lists[i].shadowRoot.querySelector('div > figure > div:nth-of-type(3)');\n            if (sold_exist !== null){item_sold_count++}; \n        }\nvar sales_rate = Math.round((item_sold_count / item_lists.length) * 100);\nreturn sales_rate        ;\n", "args": []}
+2022-04-13 10:07:09 urllib3.connectionpool DEBUG         http://localhost:58416 "POST /session/75d04cd4663753ed701c3cd60e2eccdf/execute/sync HTTP/1.1" 500 1993
+2022-04-13 10:07:09 selenium.webdriver.remote.remote_connection DEBUG         Finished Request
+2022-04-13 10:07:09 mercari_driver  ERROR         sales_rateを取得できませんでした。
+2022-04-13 10:07:09 mercari_driver  ERROR         None
+2022-04-13 10:07:09 selenium.webdriver.remote.remote_connection DEBUG         POST http://localhost:58416/session/75d04cd4663753ed701c3cd60e2eccdf/execute/sync {"script": "return document.querySelector('#search-result > div > div > div > mer-text').textContent", "args": []}
+2022-04-13 10:07:09 urllib3.connectionpool DEBUG         http://localhost:58416 "POST /session/75d04cd4663753ed701c3cd60e2eccdf/execute/sync HTTP/1.1" 200 14
+2022-04-13 10:07:09 selenium.webdriver.remote.remote_connection DEBUG         Finished Request
+2022-04-13 10:07:09 mercari_driver  ERROR         item_quantityを取得できませんでした。
+2022-04-13 10:07:09 mercari_driver  ERROR         None
+2022-04-13 10:07:09 mercari_driver  ERROR         item_quantity_text:  
+2022-04-13 10:07:09 selenium.webdriver.remote.remote_connection DEBUG         POST http://localhost:58416/session/75d04cd4663753ed701c3cd60e2eccdf/url {"url": "https://jp.mercari.com/item/m82885040975\n"}
+2022-04-13 10:07:10 urllib3.connectionpool DEBUG         http://localhost:58416 "POST /session/75d04cd4663753ed701c3cd60e2eccdf/url HTTP/1.1" 200 14
+2022-04-13 10:07:10 selenium.webdriver.remote.remote_connection DEBUG         Finished Request
+2022-04-13 10:07:10 selenium.webdriver.remote.remote_connection DEBUG         POST http://localhost:58416/session/75d04cd4663753ed701c3cd60e2eccdf/element {"using": "css selector", "value": "body"}
+2022-04-13 10:07:10 urllib3.connectionpool DEBUG         http://localhost:58416 "POST /session/75d04cd4663753ed701c3cd60e2eccdf/element HTTP/1.1" 200 88
+2022-04-13 10:07:10 selenium.webdriver.remote.remote_connection DEBUG         Finished Request
+2022-04-13 10:07:14 selenium.webdriver.remote.remote_connection DEBUG         POST http://localhost:58416/session/75d04cd4663753ed701c3cd60e2eccdf/execute/sync {"script": "return document.querySelector('#item-info > section:nth-child(1) > div > mer-heading').shadowRoot.querySelector('div > div > h1').textContent", "args": []}
+2022-04-13 10:07:14 urllib3.connectionpool DEBUG         http://localhost:58416 "POST /session/75d04cd4663753ed701c3cd60e2eccdf/execute/sync HTTP/1.1" 200 67
+2022-04-13 10:07:14 selenium.webdriver.remote.remote_connection DEBUG         Finished Request
+2022-04-13 10:07:14 selenium.webdriver.remote.remote_connection DEBUG         POST http://localhost:58416/session/75d04cd4663753ed701c3cd60e2eccdf/execute/sync {"script": "return document.querySelector('mer-price').shadowRoot.querySelector('span:nth-of-type(2)').textContent", "args": []}
+2022-04-13 10:07:14 urllib3.connectionpool DEBUG         http://localhost:58416 "POST /session/75d04cd4663753ed701c3cd60e2eccdf/execute/sync HTTP/1.1" 200 15
+2022-04-13 10:07:14 selenium.webdriver.remote.remote_connection DEBUG         Finished Request
+2022-04-13 10:07:14 selenium.webdriver.remote.remote_connection DEBUG         POST http://localhost:58416/session/75d04cd4663753ed701c3cd60e2eccdf/url {"url": "https://jp.mercari.com/search?category_id=674&t1_category_id=5&t2_category_id=72&t3_category_id=674&keyword=%E3%81%8A%E3%81%A8%E3%81%AA%E3%81%AEiPhone%20%E4%B8%80%E7%9B%AE%E7%BD%AE%E3%81%8B%E3%82%8C%E3%82%8B%E4%BD%BF%E3%81%84%E3%81%93%E3%81%AA%E3%81%97%E8%A1%93"}
+2022-04-13 10:07:15 urllib3.connectionpool DEBUG         http://localhost:58416 "POST /session/75d04cd4663753ed701c3cd60e2eccdf/url HTTP/1.1" 200 14
+2022-04-13 10:07:15 selenium.webdriver.remote.remote_connection DEBUG         Finished Request
+2022-04-13 10:07:15 selenium.webdriver.remote.remote_connection DEBUG         POST http://localhost:58416/session/75d04cd4663753ed701c3cd60e2eccdf/element {"using": "css selector", "value": "body"}
+2022-04-13 10:07:15 urllib3.connectionpool DEBUG         http://localhost:58416 "POST /session/75d04cd4663753ed701c3cd60e2eccdf/element HTTP/1.1" 200 88
+2022-04-13 10:07:15 selenium.webdriver.remote.remote_connection DEBUG         Finished Request
+2022-04-13 10:07:19 selenium.webdriver.remote.remote_connection DEBUG         POST http://localhost:58416/session/75d04cd4663753ed701c3cd60e2eccdf/execute/sync {"script": "item_sold_price_list = [];\n        var item_lists =  document.querySelector('#item-grid').querySelectorAll('li > a > mer-item-thumbnail');\n        for (let i = 0; i < item_lists.length; i++) {\n            item_price = item_lists[i].shadowRoot.querySelector('div > figure > div > mer-price');\n            price = item_price.shadowRoot.querySelector('span:nth-of-type(2)').textContent;\n            sold_exist = item_lists[i].shadowRoot.querySelector('div > figure > div:nth-of-type(2)');\n            if (sold_exist !== null){sold = true}else{sold=false}; \n            if (sold){item_sold_price_list.push(price)};\n        }\n        return item_sold_price_list;", "args": []}
+2022-04-13 10:07:19 urllib3.connectionpool DEBUG         http://localhost:58416 "POST /session/75d04cd4663753ed701c3cd60e2eccdf/execute/sync HTTP/1.1" 200 35
+2022-04-13 10:07:19 selenium.webdriver.remote.remote_connection DEBUG         Finished Request
+2022-04-13 10:07:19 selenium.webdriver.remote.remote_connection DEBUG         POST http://localhost:58416/session/75d04cd4663753ed701c3cd60e2eccdf/execute/sync {"script": "var item_lists =  document.querySelector('#item-grid').querySelectorAll('ul >li > a > mer-item-thumbnail');\nvar item_sold_count = 0\nfor (let i = 0; i < item_lists.length; i++) {\n            sold_exist = item_lists[i].shadowRoot.querySelector('div > figure > div:nth-of-type(3)');\n            if (sold_exist !== null){item_sold_count++}; \n        }\nvar sales_rate = Math.round((item_sold_count / item_lists.length) * 100);\nreturn sales_rate        ;\n", "args": []}
+2022-04-13 10:07:19 urllib3.connectionpool DEBUG         http://localhost:58416 "POST /session/75d04cd4663753ed701c3cd60e2eccdf/execute/sync HTTP/1.1" 200 11
+2022-04-13 10:07:19 selenium.webdriver.remote.remote_connection DEBUG         Finished Request
+2022-04-13 10:07:19 selenium.webdriver.remote.remote_connection DEBUG         POST http://localhost:58416/session/75d04cd4663753ed701c3cd60e2eccdf/execute/sync {"script": "return document.querySelector('#search-result > div > div > div > mer-text').textContent", "args": []}
+2022-04-13 10:07:19 urllib3.connectionpool DEBUG         http://localhost:58416 "POST /session/75d04cd4663753ed701c3cd60e2eccdf/execute/sync HTTP/1.1" 200 16
+2022-04-13 10:07:19 selenium.webdriver.remote.remote_connection DEBUG         Finished Request
+2022-04-13 10:07:19 selenium.webdriver.remote.remote_connection DEBUG         POST http://localhost:58416/session/75d04cd4663753ed701c3cd60e2eccdf/url {"url": "https://jp.mercari.com/item/m63660293711\n"}
+2022-04-13 10:07:19 urllib3.connectionpool DEBUG         http://localhost:58416 "POST /session/75d04cd4663753ed701c3cd60e2eccdf/url HTTP/1.1" 200 14
+2022-04-13 10:07:19 selenium.webdriver.remote.remote_connection DEBUG         Finished Request
+2022-04-13 10:07:19 selenium.webdriver.remote.remote_connection DEBUG         POST http://localhost:58416/session/75d04cd4663753ed701c3cd60e2eccdf/element {"using": "css selector", "value": "body"}
+2022-04-13 10:07:20 urllib3.connectionpool DEBUG         http://localhost:58416 "POST /session/75d04cd4663753ed701c3cd60e2eccdf/element HTTP/1.1" 200 88
+2022-04-13 10:07:20 selenium.webdriver.remote.remote_connection DEBUG         Finished Request
+2022-04-13 10:07:23 selenium.webdriver.remote.remote_connection DEBUG         POST http://localhost:58416/session/75d04cd4663753ed701c3cd60e2eccdf/execute/sync {"script": "return document.querySelector('#item-info > section:nth-child(1) > div > mer-heading').shadowRoot.querySelector('div > div > h1').textContent", "args": []}
+2022-04-13 10:07:23 urllib3.connectionpool DEBUG         http://localhost:58416 "POST /session/75d04cd4663753ed701c3cd60e2eccdf/execute/sync HTTP/1.1" 500 1987
+2022-04-13 10:07:23 selenium.webdriver.remote.remote_connection DEBUG         Finished Request
+2022-04-13 10:07:23 mercari_driver  ERROR         nameとpriceを取得できませんでした。
+2022-04-13 10:07:23 mercari_driver  ERROR         None
+2022-04-13 10:07:23 selenium.webdriver.remote.remote_connection DEBUG         POST http://localhost:58416/session/75d04cd4663753ed701c3cd60e2eccdf/url {"url": "https://jp.mercari.com/item/m44046090831\n"}
+2022-04-13 10:07:24 urllib3.connectionpool DEBUG         http://localhost:58416 "POST /session/75d04cd4663753ed701c3cd60e2eccdf/url HTTP/1.1" 200 14
+2022-04-13 10:07:24 selenium.webdriver.remote.remote_connection DEBUG         Finished Request
+2022-04-13 10:07:24 selenium.webdriver.remote.remote_connection DEBUG         POST http://localhost:58416/session/75d04cd4663753ed701c3cd60e2eccdf/element {"using": "css selector", "value": "body"}
+2022-04-13 10:07:24 urllib3.connectionpool DEBUG         http://localhost:58416 "POST /session/75d04cd4663753ed701c3cd60e2eccdf/element HTTP/1.1" 200 88
+2022-04-13 10:07:24 selenium.webdriver.remote.remote_connection DEBUG         Finished Request
+2022-04-13 10:07:28 selenium.webdriver.remote.remote_connection DEBUG         POST http://localhost:58416/session/75d04cd4663753ed701c3cd60e2eccdf/execute/sync {"script": "return document.querySelector('#item-info > section:nth-child(1) > div > mer-heading').shadowRoot.querySelector('div > div > h1').textContent", "args": []}
+2022-04-13 10:07:28 urllib3.connectionpool DEBUG         http://localhost:58416 "POST /session/75d04cd4663753ed701c3cd60e2eccdf/execute/sync HTTP/1.1" 500 1987
+2022-04-13 10:07:28 selenium.webdriver.remote.remote_connection DEBUG         Finished Request
+2022-04-13 10:07:28 mercari_driver  ERROR         nameとpriceを取得できませんでした。
+2022-04-13 10:07:28 mercari_driver  ERROR         None
+2022-04-13 10:07:28 selenium.webdriver.remote.remote_connection DEBUG         POST http://localhost:58416/session/75d04cd4663753ed701c3cd60e2eccdf/url {"url": "https://jp.mercari.com/item/m76949161186\n"}
+2022-04-13 10:07:29 urllib3.connectionpool DEBUG         http://localhost:58416 "POST /session/75d04cd4663753ed701c3cd60e2eccdf/url HTTP/1.1" 200 14
+2022-04-13 10:07:29 selenium.webdriver.remote.remote_connection DEBUG         Finished Request
+2022-04-13 10:07:29 selenium.webdriver.remote.remote_connection DEBUG         POST http://localhost:58416/session/75d04cd4663753ed701c3cd60e2eccdf/element {"using": "css selector", "value": "body"}
+2022-04-13 10:07:29 urllib3.connectionpool DEBUG         http://localhost:58416 "POST /session/75d04cd4663753ed701c3cd60e2eccdf/element HTTP/1.1" 200 88
+2022-04-13 10:07:29 selenium.webdriver.remote.remote_connection DEBUG         Finished Request
+2022-04-13 10:07:33 selenium.webdriver.remote.remote_connection DEBUG         POST http://localhost:58416/session/75d04cd4663753ed701c3cd60e2eccdf/execute/sync {"script": "return document.querySelector('#item-info > section:nth-child(1) > div > mer-heading').shadowRoot.querySelector('div > div > h1').textContent", "args": []}
+2022-04-13 10:07:33 urllib3.connectionpool DEBUG         http://localhost:58416 "POST /session/75d04cd4663753ed701c3cd60e2eccdf/execute/sync HTTP/1.1" 500 1987
+2022-04-13 10:07:33 selenium.webdriver.remote.remote_connection DEBUG         Finished Request
+2022-04-13 10:07:33 mercari_driver  ERROR         nameとpriceを取得できませんでした。
+2022-04-13 10:07:33 mercari_driver  ERROR         None
+2022-04-13 10:07:33 selenium.webdriver.remote.remote_connection DEBUG         DELETE http://localhost:58416/session/75d04cd4663753ed701c3cd60e2eccdf/window {}
+2022-04-13 10:07:33 urllib3.connectionpool DEBUG         http://localhost:58416 "DELETE /session/75d04cd4663753ed701c3cd60e2eccdf/window HTTP/1.1" 200 12
+2022-04-13 10:07:33 selenium.webdriver.remote.remote_connection DEBUG         Finished Request
+2022-04-13 10:07:33 selenium.webdriver.remote.remote_connection DEBUG         DELETE http://localhost:58416/session/75d04cd4663753ed701c3cd60e2eccdf {}
+2022-04-13 10:07:33 urllib3.connectionpool DEBUG         http://localhost:58416 "DELETE /session/75d04cd4663753ed701c3cd60e2eccdf HTTP/1.1" 200 14
+2022-04-13 10:07:33 selenium.webdriver.remote.remote_connection DEBUG         Finished Request

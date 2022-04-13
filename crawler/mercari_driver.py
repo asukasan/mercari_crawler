@@ -1,3 +1,10 @@
+from inspect import trace
+import urllib.parse
+import time
+import re
+import random
+import os
+import traceback
 from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
 from selenium.webdriver.support.ui import WebDriverWait
@@ -5,15 +12,19 @@ from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.common.by import By
 from bs4 import BeautifulSoup
 import chromedriver_binary
-import urllib.parse
-import time
-import re
-import random
+from logger.utils.custom_logger import Logger
 from .m_configs import GET_NEXT_BUTTON_SCRIPT,\
                     ITEM_PRICE_SCRIPT, GET_ITEM_QUANTITY_SCRIPT,\
                     GET_SALES_RATE_SCRIPT, MERCARI_DEFAULT_URL,\
                     GET_ITEM_NAME, GET_ITEM_PRICE
                     
+# ログの設定
+exec_file_name =  os.path.basename(__file__)[:-3]
+log_obj = Logger()
+log_obj.read_conf_file('logger/conf/conf.json')
+logger = log_obj.get_logger(exec_file_name)
+
+
 
 
 
@@ -24,7 +35,7 @@ def get_crawler_driver():
     op.add_argument("--proxy-server='direct://'")
     op.add_argument("--proxy-bypass-list=*")
     op.add_argument("--start-maximized")
-    op.add_argument("--headless")
+    # op.add_argument("--headless")
     op.add_argument('--user-agent=hogehoge')
     #いつも使っているブラウザを起動する(クッキーをそのまま使用できる)
     driver = webdriver.Chrome(options=op)
@@ -86,7 +97,8 @@ class MercariDriver():
                 price_list = self.arrange_price_list(price_list)
                 sold_price_list += price_list
             except:
-                print('priceを取得できませんでした。')
+                logger.error('priceを取得できませんでした。')
+                logger.error(traceback.print_exc())
                 return None
             if p != 0:
                 next = self.get_next_button()
@@ -115,7 +127,8 @@ class MercariDriver():
             try:
                 s_rate = self.driver.execute_script(GET_SALES_RATE_SCRIPT)
             except:
-                print('sales_rateを取得できませんでした。')    
+                logger.error('sales_rateを取得できませんでした。')
+                logger.error(traceback.print_exc())
                 return None
             sales_rate_list.append(s_rate)
             if p != 0:
@@ -132,7 +145,8 @@ class MercariDriver():
         try:
             item_quantity_text = self.driver.execute_script(GET_ITEM_QUANTITY_SCRIPT)
         except:
-            print("item_quantityを取得できませんでした。")
+            logger.error("item_quantityを取得できませんでした。")
+            logger.error(traceback.print_exc())
             return None
         if item_quantity_text is None:
             return None    
@@ -140,8 +154,9 @@ class MercariDriver():
         try:
             item_quantity = item_quantity_text[:item_quantity_blank_position.start()] 
         except:
-            print("item_quantityを取得できませんでした。")
-            print("item_quantity_text: ", item_quantity_text)
+            logger.error("item_quantityを取得できませんでした。")
+            logger.error(traceback.print_exc())
+            logger.error("item_quantity_text: " + item_quantity_text)
             return None      
         if item_quantity == '999+':
             item_quantity = 999
@@ -195,7 +210,8 @@ class MercariDriver():
             name = self.driver.execute_script(GET_ITEM_NAME)
             price = self.driver.execute_script(GET_ITEM_PRICE)
         except:
-            print('nameとpriceを取得できませんでした。')
+            logger.error('nameとpriceを取得できませんでした。')
+            logger.error(traceback.print_exc())
             return (None, None)   
 
         name = self.arrange_name(name)  
