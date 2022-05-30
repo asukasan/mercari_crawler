@@ -19,13 +19,13 @@ ITEM_PRICE_SCRIPT = r"""item_sold_price_list = [];
         for (let i = 0; i < item_lists.length; i++) {
             item_price = item_lists[i].shadowRoot.querySelector('div > figure > div > mer-price');
             price = item_price.shadowRoot.querySelector('span:nth-of-type(2)').textContent;
-            sold_exist = item_lists[i].shadowRoot.querySelector('div > figure > div:nth-of-type(2)');
+            sold_exist = item_lists[i].shadowRoot.querySelector('div > figure > div:nth-of-type(3)');
             if (sold_exist !== null){sold = true}else{sold=false}; 
             if (sold){item_sold_price_list.push(price)};
         }
         return item_sold_price_list;"""
 
-GET_SALES_RATE_SCRIPT = r"""var item_lists =  document.querySelector('#item-grid').querySelectorAll('ul >li > a > mer-item-thumbnail');
+GET_SALES_RATE_SCRIPT = r"""var item_lists =  document.querySelector('#item-grid').querySelectorAll('li > a > mer-item-thumbnail');
 var item_sold_count = 0
 for (let i = 0; i < item_lists.length; i++) {
             sold_exist = item_lists[i].shadowRoot.querySelector('div > figure > div:nth-of-type(3)');
