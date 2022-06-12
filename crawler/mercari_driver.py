@@ -81,6 +81,7 @@ class MercariDriver():
         return url_list
 
     def join_mercari_url(self, url_list):
+        # メルカリのサイトは相対パスでリンクをとっているために、joinする
         joined_url_list = []
         for url in url_list:
             absolute_url = urllib.parse.urljoin(MERCARI_DEFAULT_URL, url)
@@ -98,6 +99,7 @@ class MercariDriver():
                 sold_price_list += price_list
             except:
                 logger.error('priceを取得できませんでした。')
+                logger.error(self.driver.current_url)
                 logger.error(traceback.print_exc())
                 return None
             if p != 0:
@@ -106,12 +108,12 @@ class MercariDriver():
                     next.click()
                     custom_time_sleep()
         if len(sold_price_list) == 0:
-            return None            
-        average_price = sum(sold_price_list) / len(sold_price_list)  
-        average_price = int(average_price)           
+            return 0            
+        average_price = int(sum(sold_price_list) / len(sold_price_list))            
         return average_price
 
     def arrange_price_list(self, price_list):
+        # 価格の中のカンマをなくす(4,700→4700)
         arrange_price_list = []
         for price in price_list:
             after_price = price.replace(",", "")
@@ -128,6 +130,7 @@ class MercariDriver():
                 s_rate = self.driver.execute_script(GET_SALES_RATE_SCRIPT)
             except:
                 logger.error('sales_rateを取得できませんでした。')
+                logger.error(self.driver.current_url)
                 logger.error(traceback.print_exc())
                 return None
             sales_rate_list.append(s_rate)
@@ -146,6 +149,7 @@ class MercariDriver():
             item_quantity_text = self.driver.execute_script(GET_ITEM_QUANTITY_SCRIPT)
         except:
             logger.error("item_quantityを取得できませんでした。")
+            logger.error(self.driver.current_url)
             logger.error(traceback.print_exc())
             return None
         if item_quantity_text is None:
@@ -155,8 +159,8 @@ class MercariDriver():
             item_quantity = item_quantity_text[:item_quantity_blank_position.start()] 
         except:
             logger.error("item_quantityを取得できませんでした。")
+            logger.error(self.driver.current_url)
             logger.error(traceback.print_exc())
-            logger.error("item_quantity_text: " + item_quantity_text)
             return None      
         if item_quantity == '999+':
             item_quantity = 999
@@ -165,7 +169,6 @@ class MercariDriver():
         return item_quantity
 
     def get_items_info(self, url=None, page=1):
-        items_info = {}
         average_price_list = []
         sales_rate_list = []
         item_quantity_list = []
@@ -177,6 +180,7 @@ class MercariDriver():
             price = self.get_items_sold_average_price()
             rate = self.get_sales_rate()
             quantity = self.get_item_quantity()
+            
 
             if (price is None) or (rate is None) or (quantity is None):
                 return None
@@ -196,10 +200,7 @@ class MercariDriver():
         sales_rate = int(sum(sales_rate_list) / len(sales_rate_list))
         item_quantity = int(sum(item_quantity_list) / len(item_quantity_list))
                 
-        items_info['average_price'] = average_price
-        items_info['sales_rate'] = sales_rate
-        items_info['item_quantity'] = item_quantity
-        return (items_info)
+        return average_price, sales_rate, item_quantity
 
     def get_next_button(self):
         next_button = self.driver.execute_script(GET_NEXT_BUTTON_SCRIPT)
@@ -211,19 +212,10 @@ class MercariDriver():
             price = self.driver.execute_script(GET_ITEM_PRICE)
         except:
             logger.error('nameとpriceを取得できませんでした。')
+            logger.error(self.driver.current_url)
             logger.error(traceback.print_exc())
             return (None, None)   
-
-        name = self.arrange_name(name)  
+ 
         price = price.replace(",", "")
         price = int(price)
         return (name, price)
-
-    def arrange_name(self, name):
-        if "裁断" in name:
-            return None
-        if "【" and "】" in name:
-            name = re.sub("【.*】", "", name)
-            return name  
-        return name      
-                
