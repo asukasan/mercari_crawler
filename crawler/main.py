@@ -36,9 +36,13 @@ def main(main_url=MERCARI_IT_BOOK_URL, quantity=20, category_id=674, db_name="me
             continue
         else:
             BargainItem.objects.create(
+                name = item_name,
                 price = item_price, 
                 score = item_score, 
-                profit = item_profit,   
+                profit = item_profit,
+                average_price = average_price,
+                sales_rate = sales_rate,
+                category_id = category_id
             )
             if item_score > 5:
                 notify(search_item_url, item_name, item_score, item_profit)

@@ -183,7 +183,7 @@ class MercariDriver():
             
 
             if (price is None) or (rate is None) or (quantity is None):
-                return None
+                return None, None, None
 
             average_price_list.append(price)
             sales_rate_list.append(rate)
