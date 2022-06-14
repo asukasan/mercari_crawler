@@ -1,13 +1,11 @@
 from django.db import models
 from django.core.validators import MaxValueValidator, MinValueValidator
-from django.db.models.fields import IntegerField
-from django.db.models.fields.related import ForeignKey
 from django.utils import timezone
 
 
     
 class BargainItem(models.Model):
-    name = models.CharField(max_length=32)
+    name = models.CharField(max_length=64)
     price = models.IntegerField()
     score = models.IntegerField(validators=[MinValueValidator(1), MaxValueValidator(10)])
     profit = models.IntegerField()
