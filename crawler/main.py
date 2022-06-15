@@ -5,6 +5,7 @@ from crawler.notification import notify
 from .mercari_driver import MercariDriver, get_crawler_driver
 from .m_configs import  MERCARI_IT_BOOK_URL, MERCARI_DEFAULT_URL
 from .evaluation import get_item_evaluation
+from .filter.item_name import have_prohibit_name
 from .django_model_setup import d_setup
 d_setup(db_name="mercari_db")
 from item_management.models import BargainItem
@@ -34,18 +35,24 @@ def main(main_url=MERCARI_IT_BOOK_URL, quantity=20, category_id=674, db_name="me
 
         if item_score == 0:
             continue
-        else:
-            BargainItem.objects.create(
-                name = item_name,
-                price = item_price, 
-                score = item_score, 
-                profit = item_profit,
-                average_price = average_price,
-                sales_rate = sales_rate,
-                category_id = category_id
-            )
-            if item_score > 5:
-                notify(search_item_url, item_name, item_score, item_profit)
+
+        if item_name in BargainItem.objects.all()[:10].values_list("name", flat=True):
+            continue
+        
+        if have_prohibit_name(item_name):
+            continue
+        
+        BargainItem.objects.create(
+            name = item_name,
+            price = item_price, 
+            score = item_score, 
+            profit = item_profit,
+            average_price = average_price,
+            sales_rate = sales_rate,
+            category_id = category_id
+        )
+        if item_score > 5:
+            notify(search_item_url, item_name, item_score, item_profit)
                 
         
 if __name__ == '__main__':
