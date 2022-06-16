@@ -42,7 +42,7 @@ def get_crawler_driver():
     return driver
 
 def custom_time_sleep():
-    sec = 3 + random.uniform(0.1, 1)
+    sec = 4 + random.uniform(0.1, 1)
     time.sleep(sec)
 
 

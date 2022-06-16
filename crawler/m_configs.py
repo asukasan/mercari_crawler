@@ -32,6 +32,6 @@ for (let i = 0; i < item_lists.length; i++) {
             if (sold_exist !== null){item_sold_count++}; 
         }
 var sales_rate = Math.round((item_sold_count / item_lists.length) * 100);
-return sales_rate        ;
+return sales_rate;
 """
 
