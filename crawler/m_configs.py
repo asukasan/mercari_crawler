@@ -1,6 +1,6 @@
 GET_NEXT_BUTTON_SCRIPT = "return document.querySelector('[data-testid=pagination-next-button] > button')"
 
-MERCARI_IT_BOOK_URL = "https://jp.mercari.com/search?category_id=674&t1_category_id=5&t2_category_id=72&t3_category_id=674" 
+MERCARI_IT_BOOK_URL = "https://jp.mercari.com/search?keyword=nintendo" 
 
 MERCARI_DEFAULT_URL = "https://jp.mercari.com"
 
@@ -9,6 +9,7 @@ GET_ITEM_QUANTITY_SCRIPT = "return document.querySelector('#search-result > div 
 GET_ITEM_NAME = "return document.querySelector('#item-info > section:nth-child(1) > div > mer-heading').shadowRoot.querySelector('div > div > h1').textContent"
 
 GET_ITEM_PRICE = "return document.querySelector('mer-price').shadowRoot.querySelector('span:nth-of-type(2)').textContent"
+
 
 MERCARI_POSTAGE = 175
 

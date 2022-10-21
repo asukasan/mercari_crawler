@@ -42,3 +42,7 @@
 2022-06-14 09:54:41 mercari_driver  ERROR         nameとpriceを取得できませんでした。
 2022-06-14 09:54:41 mercari_driver  ERROR         https://jp.mercari.com/item/m87252416655
 2022-06-14 09:54:41 mercari_driver  ERROR         None
+2022-10-21 17:34:33 mercari_driver  ERROR         https://jp.mercari.com/item/m91772657113
+2022-10-21 17:34:33 mercari_driver  ERROR         None
+2022-10-21 17:36:53 mercari_driver  ERROR         https://jp.mercari.com/item/m31286802279
+2022-10-21 17:36:53 mercari_driver  ERROR         None

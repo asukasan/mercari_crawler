@@ -1,4 +1,3 @@
-from inspect import trace
 import urllib.parse
 import time
 import re
@@ -11,7 +10,6 @@ from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.common.by import By
 from bs4 import BeautifulSoup
-import chromedriver_binary
 from logger.utils.custom_logger import Logger
 from .m_configs import GET_NEXT_BUTTON_SCRIPT,\
                     ITEM_PRICE_SCRIPT, GET_ITEM_QUANTITY_SCRIPT,\
@@ -210,6 +208,10 @@ class MercariDriver():
         try:
             name = self.driver.execute_script(GET_ITEM_NAME)
             price = self.driver.execute_script(GET_ITEM_PRICE)
+
+
+            #print("name: ", name)
+            #print("price: ", price)
         except:
             logger.error('nameとpriceを取得できませんでした。')
             logger.error(self.driver.current_url)
