@@ -14,7 +14,7 @@ from logger.utils.custom_logger import Logger
 from .m_configs import GET_NEXT_BUTTON_SCRIPT,\
                     ITEM_PRICE_SCRIPT, GET_ITEM_QUANTITY_SCRIPT,\
                     GET_SALES_RATE_SCRIPT, MERCARI_DEFAULT_URL,\
-                    GET_ITEM_NAME, GET_ITEM_PRICE
+                    GET_ITEM_NAME, GET_ITEM_PRICE, GET_ITEM_DESCRIPTION
                     
 # ログの設定
 exec_file_name =  os.path.basename(__file__)[:-3]
@@ -60,7 +60,7 @@ class MercariDriver():
         )
         custom_time_sleep()
 
-    def get_items_url(self, url=None, page=1, quantity=20):
+    def get_items_url(self, url=None, page=1, quantity=50):
         url_list = []
         if url is not None:
             self.move_page(url)
@@ -208,6 +208,7 @@ class MercariDriver():
         try:
             name = self.driver.execute_script(GET_ITEM_NAME)
             price = self.driver.execute_script(GET_ITEM_PRICE)
+            description = self.driver.execute_script(GET_ITEM_DESCRIPTION)
 
 
             #print("name: ", name)
@@ -220,4 +221,4 @@ class MercariDriver():
  
         price = price.replace(",", "")
         price = int(price)
-        return (name, price)
+        return (name, price, description)

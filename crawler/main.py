@@ -7,7 +7,7 @@ from .evaluation import get_item_evaluation
 from .filter.item_name import have_prohibit_name
 
 
-def main(main_url=MERCARI_IT_BOOK_URL, quantity=3):
+def main(main_url=MERCARI_IT_BOOK_URL, quantity=50):
     driver = get_crawler_driver()
     m_crawler = MercariDriver(driver)
 
@@ -17,8 +17,8 @@ def main(main_url=MERCARI_IT_BOOK_URL, quantity=3):
     for item_url in latest_item_url_list:
 
         m_crawler.move_page(item_url)
-        item_name, item_price = m_crawler.get_name_and_price()
-        if item_name is None or item_price is None:
+        item_name, item_price, item_description = m_crawler.get_name_and_price()
+        if item_name is None or item_price is None or item_description is None:
             continue
         item_name_encode = urllib.parse.quote(item_name)
         search_item_url = main_url + "&keyword=" + item_name_encode
@@ -36,8 +36,9 @@ def main(main_url=MERCARI_IT_BOOK_URL, quantity=3):
         #if have_prohibit_name(item_name):
         #    continue
 
-        
-        notify(search_item_url, item_name, "item_score", "item_profit", item_url, item_price)
+        #notify(item_url, item_name, item_score, item_profit, item_price)
+
+        notify(item_url, item_name, item_price, item_description)
 
     driver.close()
     driver.quit()        

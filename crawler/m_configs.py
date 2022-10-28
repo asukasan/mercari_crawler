@@ -10,6 +10,14 @@ GET_ITEM_NAME = "return document.querySelector('#item-info > section:nth-child(1
 
 GET_ITEM_PRICE = "return document.querySelector('mer-price').shadowRoot.querySelector('span:nth-of-type(2)').textContent"
 
+"""
+Item description nth-child(2) looks like this:
+xpath=//div[@id='item-info']/section[2]
+get all the text in the section[2] element
+return= "return document.querySelector('#item-info > section:nth-child(2)').textContent"
+"""
+
+GET_ITEM_DESCRIPTION = "return document.querySelector('#item-info > section:nth-child(2)').textContent"
 
 MERCARI_POSTAGE = 175
 
