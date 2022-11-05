@@ -1,6 +1,5 @@
 import urllib.parse
 import time
-import re
 import random
 import os
 import traceback
@@ -10,17 +9,12 @@ from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.common.by import By
 from bs4 import BeautifulSoup
-from logger.utils.custom_logger import Logger
 from .m_configs import GET_NEXT_BUTTON_SCRIPT,\
-                    ITEM_PRICE_SCRIPT, GET_ITEM_QUANTITY_SCRIPT,\
-                    GET_SALES_RATE_SCRIPT, MERCARI_DEFAULT_URL,\
-                    GET_ITEM_NAME, GET_ITEM_PRICE, GET_ITEM_DESCRIPTION
+                    MERCARI_DEFAULT_URL,\
+                    GET_ITEM_NAME, GET_ITEM_PRICE, GET_ITEM_DESCRIPTION, QUANTITY, GET_ITEM_SOLD
                     
-# ログの設定
+
 exec_file_name =  os.path.basename(__file__)[:-3]
-log_obj = Logger()
-log_obj.read_conf_file('logger/conf/conf.json')
-logger = log_obj.get_logger(exec_file_name)
 
 
 
@@ -35,7 +29,7 @@ def get_crawler_driver():
     op.add_argument("--start-maximized")
     # op.add_argument("--headless")
     # op.add_argument('--user-agent=hogehoge')
-    #いつも使っているブラウザを起動する(クッキーをそのまま使用できる)
+    #Iniciar navegador habitual (las cookies se pueden utilizar tal cual)
     driver = webdriver.Chrome(options=op)
     return driver
 
@@ -45,11 +39,7 @@ def custom_time_sleep():
 
 
 class MercariDriver():
-    """
-    最終的にはitem単体とitems_infoを比較して利益がどのくらい出せるかを知りたい
-    情報を抽出
-    
-    """
+
     def __init__(self, driver):
         self.driver = driver
 
@@ -60,7 +50,7 @@ class MercariDriver():
         )
         custom_time_sleep()
 
-    def get_items_url(self, url=None, page=1, quantity=50):
+    def get_items_url(self, url=None, page=1, quantity=QUANTITY):
         url_list = []
         if url is not None:
             self.move_page(url)
@@ -79,133 +69,26 @@ class MercariDriver():
         return url_list
 
     def join_mercari_url(self, url_list):
-        # メルカリのサイトは相対パスでリンクをとっているために、joinする
+        # Unir rutas relativas con la ruta base
         joined_url_list = []
         for url in url_list:
             absolute_url = urllib.parse.urljoin(MERCARI_DEFAULT_URL, url)
             joined_url_list.append(absolute_url)
         return joined_url_list  
 
-    def get_items_sold_average_price(self, url=None, page=1):
-        sold_price_list = []
-        if url is not None:
-            self.move_page(url)        
-        for p in reversed(range(page)):
-            try:
-                price_list = self.driver.execute_script(ITEM_PRICE_SCRIPT)
-                price_list = self.arrange_price_list(price_list)
-                sold_price_list += price_list
-            except:
-                logger.error('priceを取得できませんでした。')
-                logger.error(self.driver.current_url)
-                logger.error(traceback.print_exc())
-                return None
-            if p != 0:
-                next = self.get_next_button()
-                if next is not None:
-                    next.click()
-                    custom_time_sleep()
-        if len(sold_price_list) == 0:
-            return 0            
-        average_price = int(sum(sold_price_list) / len(sold_price_list))            
-        return average_price
-
-    def arrange_price_list(self, price_list):
-        # 価格の中のカンマをなくす(4,700→4700)
-        arrange_price_list = []
-        for price in price_list:
-            after_price = price.replace(",", "")
-            after_price = int(after_price)
-            arrange_price_list.append(after_price)
-        return arrange_price_list 
-
-    def get_sales_rate(self, url=None, page=1):
-        if url is not None:
-            self.move_page(url)
-        sales_rate_list = []
-        for p in reversed(range(page)):
-            try:
-                s_rate = self.driver.execute_script(GET_SALES_RATE_SCRIPT)
-            except:
-                logger.error('sales_rateを取得できませんでした。')
-                logger.error(self.driver.current_url)
-                logger.error(traceback.print_exc())
-                return None
-            sales_rate_list.append(s_rate)
-            if p != 0:
-                next = self.get_next_button()
-                if next is not None:
-                    next.click()
-                    custom_time_sleep()
-        sales_rate = int(sum(sales_rate_list) / len(sales_rate_list))
-        return sales_rate
-
-    def get_item_quantity(self, url=None):
-        if url is not None:
-            self.move_page(url) 
-        try:
-            item_quantity_text = self.driver.execute_script(GET_ITEM_QUANTITY_SCRIPT)
-        except:
-            logger.error("item_quantityを取得できませんでした。")
-            logger.error(self.driver.current_url)
-            logger.error(traceback.print_exc())
-            return None
-        if item_quantity_text is None:
-            return None    
-        item_quantity_blank_position = re.search("件", item_quantity_text)
-        try:
-            item_quantity = item_quantity_text[:item_quantity_blank_position.start()] 
-        except:
-            logger.error("item_quantityを取得できませんでした。")
-            logger.error(self.driver.current_url)
-            logger.error(traceback.print_exc())
-            return None      
-        if item_quantity == '999+':
-            item_quantity = 999
-        else:
-            item_quantity = int(item_quantity)     
-        return item_quantity
-
-    def get_items_info(self, url=None, page=1):
-        average_price_list = []
-        sales_rate_list = []
-        item_quantity_list = []
-        if url is not None:
-            self.move_page(url)
-        for p in reversed(range(page)):
-            #Noneだった時の処理
-
-            price = self.get_items_sold_average_price()
-            rate = self.get_sales_rate()
-            quantity = self.get_item_quantity()
-            
-
-            if (price is None) or (rate is None) or (quantity is None):
-                return None, None, None
-
-            average_price_list.append(price)
-            sales_rate_list.append(rate)
-            item_quantity_list.append(quantity)
-
-            if p != 0:
-                next_button = self.get_next_button()
-                if next_button is not None:
-                    next_button.click()
-                else:
-                    break
-
-        average_price = int(sum(average_price_list) / len(average_price_list))
-        sales_rate = int(sum(sales_rate_list) / len(sales_rate_list))
-        item_quantity = int(sum(item_quantity_list) / len(item_quantity_list))
-                
-        return average_price, sales_rate, item_quantity
-
+   
     def get_next_button(self):
         next_button = self.driver.execute_script(GET_NEXT_BUTTON_SCRIPT)
         return next_button
     
     def get_name_and_price(self):
         try:
+            try:
+                sold_exist = self.driver.execute_script(GET_ITEM_SOLD)
+
+            except:
+                sold_exist = None
+
             name = self.driver.execute_script(GET_ITEM_NAME)
             price = self.driver.execute_script(GET_ITEM_PRICE)
             description = self.driver.execute_script(GET_ITEM_DESCRIPTION)
@@ -214,11 +97,15 @@ class MercariDriver():
             #print("name: ", name)
             #print("price: ", price)
         except:
-            logger.error('nameとpriceを取得できませんでした。')
-            logger.error(self.driver.current_url)
-            logger.error(traceback.print_exc())
-            return (None, None)   
+            print('No se pudo obtener el nombre y el precio.')
+            print(self.driver.current_url)
+            print(traceback.print_exc())
+            return (None, None, None)   
  
         price = price.replace(",", "")
         price = int(price)
-        return (name, price, description)
+        #check if sold_exist is False
+        if sold_exist is None:
+            return (name, price, description)
+        else:
+            return (None, None, None)

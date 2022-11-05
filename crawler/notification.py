@@ -4,6 +4,7 @@ import csv
 import os
 import io
 from googletrans import Translator
+from .m_configs import PRODUCT_CATEGORY, trans_lang
 
 translator = Translator()
 
@@ -49,8 +50,11 @@ def notify(item_url, name, price, description):
 
     
     try:
-        name = translator.translate(name).text
-        description = translator.translate(description).text
+        #translate from japanese to english
+        name = translator.translate(name, dest=trans_lang).text
+        description = translator.translate(description, dest=trans_lang).text
+
+
         #replace all double quotes with single quotes
         name = name.replace('"', "'")
         description = description.replace('"', "'")
@@ -62,6 +66,32 @@ def notify(item_url, name, price, description):
         description = re.sub(r'#?\d\d+ minutes before the game', '', description)
         # remove "#One minute ago" from description (use regex) and # is optional
         description = re.sub(r'#?One minute ago', '', description)
+        # remove "#(word) 1 minute ago" from description (use regex) and # is optional
+        description = re.sub(r'#?\w+ 1 minute ago', '', description)
+        # remove "#(word) n minutes ago" from description (use regex) and # is optional
+        description = re.sub(r'#?\w+ \d+ minutes ago', '', description)
+        # remove "#n minutes before switch process" from description where n is a number (use regex) and # is optional
+        description = re.sub(r'#?\d+ minutes before switch process', '', description)
+        # remove "#n minutes before controller" from description where n is a number (use regex) and # is optional
+        description = re.sub(r'#?\d+ minutes before controller', '', description)
+        # remove #(word) n seconds ago from description where n is a number (use regex) and # is optional and word is optional
+        description = re.sub(r'#?\w+ \d+ seconds ago', '', description)
+        # if there are dots in description and they have no space after it, add a space after each dot
+        description = re.sub(r'(?<=[^ ])\.(?=[^ ])', '. ', description)
+        # remove n hours ago from description where n is a number (use regex)
+        description = re.sub(r'\d+ hours ago', '', description)
+        #if description has yen currency (¥) replace it with euro currency (€) and multiply the price by 0.65 and then by 1.5
+        if "¥" in description:
+            description = description.replace("¥", "€")
+            #find the price in the description and replace it with the euro price (optional if price digit is before or after the currency and optional space befor or after the currency)
+            description = re.sub(r'(\d+)(\s*)(€)', eur_price, description)
+            description = re.sub(r'(€)(\s*)(\d+)', eur_price, description)
+        if "yen" in description:
+            description = description.replace("yen", "€")
+            #find the price in the description and replace it with the euro price
+            description = re.sub(r'(\d+)(\s*)(€)', eur_price, description)
+            description = re.sub(r'(€)(\s*)(\d+)', eur_price, description)
+
 
 
 
@@ -110,54 +140,60 @@ def notify(item_url, name, price, description):
             'Description',
             'SKU',
             'Categories'])
-
-            writer.writerow([
-                item_url,
-                'simple',
-                '1',
-                '0',
-                'visible',
-                'taxable',
-                '1',
-                '0',
-                '0',
-                '1',
-                '',
-                name,
-                eur_price,
-                '',
-                item_url,
-                img_urls,
-                description,
-                item_sku,
-                'Consolas y videojuegos>Consolas y videojuegos'
-                ])
+            #check if the product is already in the csv file
+            if not any(item_id in s for s in io.open('products.csv', encoding="utf-8")):
+                writer.writerow([
+                    item_url,
+                    'simple',
+                    '1',
+                    '0',
+                    'visible',
+                    'taxable',
+                    '1',
+                    '0',
+                    '0',
+                    '1',
+                    '',
+                    name,
+                    eur_price,
+                    '',
+                    item_url,
+                    img_urls,
+                    description,
+                    item_sku,
+                    PRODUCT_CATEGORY
+                    ])
+            else:
+                print("ya existe un producto con esta ID")
 
     else:
         with io.open('products.csv', 'a', encoding="utf-8") as f:
             writer = csv.writer(f)
             #add "" to each value. example: "simple" instead of simple
-            writer.writerow([
-                item_url,
-                'simple',
-                '1',
-                '0',
-                'visible',
-                'taxable',
-                '1',
-                '0',
-                '0',
-                '1',
-                '',
-                name,
-                eur_price,
-                '',
-                item_url,
-                img_urls,
-                description,
-                item_sku,
-                'Consolas y videojuegos>Consolas y videojuegos'
-                ])
+            if not any(item_id in s for s in io.open('products.csv', encoding="utf-8")):
+                writer.writerow([
+                    item_url,
+                    'simple',
+                    '1',
+                    '0',
+                    'visible',
+                    'taxable',
+                    '1',
+                    '0',
+                    '0',
+                    '1',
+                    '',
+                    name,
+                    eur_price,
+                    '',
+                    item_url,
+                    img_urls,
+                    description,
+                    item_sku,
+                    PRODUCT_CATEGORY
+                    ])
+            else:
+                print("ya existe un producto con esta ID")
     
 
 
