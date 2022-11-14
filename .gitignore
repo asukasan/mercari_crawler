@@ -4,5 +4,5 @@ build
 __pycache__/
 .DS_Store
 venv/
-m_crawler_schedule.sh
+m_scrapper_schedule.sh
 logger/log
