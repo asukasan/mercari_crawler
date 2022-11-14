@@ -4,13 +4,17 @@ import csv
 import os
 import io
 from googletrans import Translator
-from .m_configs import PRODUCT_CATEGORY, trans_lang
+from .m_configs import PRODUCT_CATEGORY, trans_lang, INTEREST_RATE
 
 translator = Translator()
 
 
 def notify(item_url, name, price, description):
-    eur_price = str(round(((price * 0.0068) * 1.5), 2)) + " EUR" 
+    #transform interest rate from percentage to decimal
+    # f.e. INTEREST_RATE is 50, interest should be 1.5
+    interest = INTEREST_RATE / 100 + 1
+    
+    eur_price = str(round(((price * 0.0068) * interest), 2)) + " EUR" 
     
     #example url: https://jp.mercari.com/item/m35776031725
     
@@ -150,12 +154,12 @@ def notify(item_url, name, price, description):
                     'taxable',
                     '1',
                     '0',
-                    '0',
+                    '1',
                     '1',
                     '',
                     name,
                     eur_price,
-                    '',
+                    '1',
                     item_url,
                     img_urls,
                     description,
@@ -179,7 +183,7 @@ def notify(item_url, name, price, description):
                     'taxable',
                     '1',
                     '0',
-                    '0',
+                    '1',
                     '1',
                     '',
                     name,

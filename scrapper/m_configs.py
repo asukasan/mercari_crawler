@@ -41,6 +41,29 @@ while True:
         break
     else:
         break
+    
+# ask for an interest rate (default is 50%) with error checking
+
+INTEREST_RATE = 50
+
+while True:
+    try:
+        interest_input = input("Introducir interés a calcular en porcentaje (ej.: 50): ")
+        if INTEREST_RATE < 0:
+            print("Por favor, introducir un número mayor a 0!!!")
+            continue
+        if interest_input == "":
+            INTEREST_RATE = 50
+            break
+        else:
+            INTEREST_RATE = float(interest_input)
+            break
+    except ValueError:
+        print("Por favor, introducir un número y no letra!!!")
+        continue
+
+    
+        
 
 # ask for a translation dest language input (default is en) with error checking
 
