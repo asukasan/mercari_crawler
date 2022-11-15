@@ -8,6 +8,15 @@ To use:
 -Add C:\\webdrivers\chromedriver.exe into Environment Variable
 -Download and install Selenium
 
+#install dependencies
+
+$pip3 install selenium
+
+$pip3 install webdriver-manager
+
+$pip3 install packaging
+
+
 Execute:
 
 $python3 main.py

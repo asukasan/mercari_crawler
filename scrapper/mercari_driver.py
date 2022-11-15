@@ -4,6 +4,10 @@ import random
 import os
 import traceback
 from selenium import webdriver
+from webdriver_manager.chrome import ChromeDriverManager
+
+
+
 from selenium.webdriver.chrome.options import Options
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
@@ -27,10 +31,14 @@ def get_scrapper_driver():
     op.add_argument("--proxy-server='direct://'")
     op.add_argument("--proxy-bypass-list=*")
     op.add_argument("--start-maximized")
+    op.add_argument('headless')
     # op.add_argument("--headless")
     # op.add_argument('--user-agent=hogehoge')
     #Iniciar navegador habitual (las cookies se pueden utilizar tal cual)
-    driver = webdriver.Chrome(options=op)
+    #driver = webdriver.Chrome(options=op)
+    
+    driver = webdriver.Chrome(ChromeDriverManager().install(), options=op)
+
     return driver
 
 def custom_time_sleep():
