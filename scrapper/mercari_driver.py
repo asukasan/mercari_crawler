@@ -7,7 +7,7 @@ from selenium import webdriver
 from webdriver_manager.chrome import ChromeDriverManager
 
 
-
+from chromedriver import get_driver
 from selenium.webdriver.chrome.options import Options
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
@@ -37,8 +37,8 @@ def get_scrapper_driver():
     #Iniciar navegador habitual (las cookies se pueden utilizar tal cual)
     #driver = webdriver.Chrome(options=op)
     
-    driver = webdriver.Chrome(ChromeDriverManager().install(), options=op)
-
+    #driver = webdriver.Chrome(ChromeDriverManager().install(), options=op)
+    d = get_driver()
     return driver
 
 def custom_time_sleep():
