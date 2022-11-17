@@ -5,16 +5,13 @@ To use:
 (Windows)
 -Download Selenium
 -Import chromedriver.exe from ./dist/webdrivers/chromedriver.exe into C:\\webdrivers
--Add C:\\webdrivers\chromedriver.exe into Environment Variable
--Download and install Selenium
+-Add C:\\webdrivers\chromedriver.exe into Environment Variable and/or have Google Chrome installed on the PC
+
 
 #install dependencies
 
-$pip3 install selenium
+$pip install -r requirements.txt
 
-$pip3 install webdriver-manager
-
-$pip3 install packaging
 
 
 Execute:
