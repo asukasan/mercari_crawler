@@ -1,0 +1,4 @@
+googletrans
+selenium
+packager
+webdriver_manager
