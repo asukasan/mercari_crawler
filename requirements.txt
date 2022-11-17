@@ -1,4 +1,4 @@
 googletrans
 selenium
 packager
-webdriver_manager
+webdriver-manager
