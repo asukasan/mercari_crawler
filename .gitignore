@@ -1,9 +1,8 @@
-crawler/line_configs.py
-crawler/django_model_setup.py
-crawler/latest_item_url_list.txt
-config/secret_key.py
+products.csv
+build
+
 __pycache__/
 .DS_Store
 venv/
-m_crawler_schedule.sh
+m_scrapper_schedule.sh
 logger/log
