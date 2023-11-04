@@ -13,7 +13,7 @@ GET_ITEM_NAME = "return document.querySelector('#item-info > section:nth-child(1
 
 GET_ITEM_PRICE = "return document.querySelector('#item-info > section:nth-child(1) > section:nth-child(2) > div > div > span:nth-child(2)').textContent"
 
-MERCARI_POSTAGE = 175
+MERCARI_POSTAGE = 210
 
 MERCARI_COMMISSION_RATE = 0.1
 

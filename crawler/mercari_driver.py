@@ -38,7 +38,7 @@ def get_crawler_driver():
     op.add_argument("--proxy-server='direct://'")
     op.add_argument("--proxy-bypass-list=*")
     op.add_argument("--start-maximized")
-    # op.add_argument("--headless")
+    op.add_argument("--headless")
     # op.add_argument('--user-agent=hogehoge')
     #いつも使っているブラウザを起動する(クッキーをそのまま使用できる)
     driver = webdriver.Chrome(service=ChromeService(ChromeDriverManager().install()), options=op)

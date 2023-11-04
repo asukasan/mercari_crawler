@@ -80,7 +80,8 @@ DATABASES = {
     'default': {
             'ENGINE': 'django.db.backends.mysql',
             'NAME': 'mercari_db',
-            'USER': 'asuka',
+            'PORT': 3306,
+            'USER': 'ixtab',
             'PASSWORD': 'Ixtab191',
             'HOST': 'localhost', 
     }

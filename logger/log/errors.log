@@ -168,3 +168,6 @@
 2023-11-03 16:19:57 mercari_driver  ERROR         item_quantityを取得できませんでした。
 2023-11-03 16:19:57 mercari_driver  ERROR         https://jp.mercari.com/search?category_id=674&t1_category_id=5&t2_category_id=72&t3_category_id=674&keyword=%E5%AE%9F%E4%BE%8B%E3%81%A7%E5%AD%A6%E3%81%B6%E3%82%B2%E3%83%BC%E3%83%A0AI%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0
 2023-11-03 16:19:57 mercari_driver  ERROR         None
+2023-11-04 16:43:40 mercari_driver  ERROR         nameとpriceを取得できませんでした。
+2023-11-04 16:43:40 mercari_driver  ERROR         https://jp.mercari.com/shops/product/47aNxMdx5r6zm2ySFsG4fV
+2023-11-04 16:43:40 mercari_driver  ERROR         None
