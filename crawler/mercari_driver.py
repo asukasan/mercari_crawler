@@ -17,6 +17,9 @@ from .m_configs import GET_NEXT_BUTTON_SCRIPT,\
                     ITEM_PRICE_SCRIPT, GET_ITEM_QUANTITY_SCRIPT,\
                     GET_SALES_RATE_SCRIPT, MERCARI_DEFAULT_URL,\
                     GET_ITEM_NAME, GET_ITEM_PRICE
+from selenium import webdriver
+from selenium.webdriver.chrome.service import Service as ChromeService
+from webdriver_manager.chrome import ChromeDriverManager
                     
 # ログの設定
 exec_file_name =  os.path.basename(__file__)[:-3]
@@ -38,7 +41,7 @@ def get_crawler_driver():
     # op.add_argument("--headless")
     # op.add_argument('--user-agent=hogehoge')
     #いつも使っているブラウザを起動する(クッキーをそのまま使用できる)
-    driver = webdriver.Chrome(options=op)
+    driver = webdriver.Chrome(service=ChromeService(ChromeDriverManager().install()), options=op)
     return driver
 
 def custom_time_sleep():
@@ -146,26 +149,13 @@ class MercariDriver():
         if url is not None:
             self.move_page(url) 
         try:
-            item_quantity_text = self.driver.execute_script(GET_ITEM_QUANTITY_SCRIPT)
+            item_quantity = self.driver.execute_script(GET_ITEM_QUANTITY_SCRIPT)
         except:
             logger.error("item_quantityを取得できませんでした。")
             logger.error(self.driver.current_url)
             logger.error(traceback.print_exc())
             return None
-        if item_quantity_text is None:
-            return None    
-        item_quantity_blank_position = re.search("件", item_quantity_text)
-        try:
-            item_quantity = item_quantity_text[:item_quantity_blank_position.start()] 
-        except:
-            logger.error("item_quantityを取得できませんでした。")
-            logger.error(self.driver.current_url)
-            logger.error(traceback.print_exc())
-            return None      
-        if item_quantity == '999+':
-            item_quantity = 999
-        else:
-            item_quantity = int(item_quantity)     
+    
         return item_quantity
 
     def get_items_info(self, url=None, page=1):

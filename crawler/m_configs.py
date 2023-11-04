@@ -4,34 +4,60 @@ MERCARI_IT_BOOK_URL = "https://jp.mercari.com/search?category_id=674&t1_category
 
 MERCARI_DEFAULT_URL = "https://jp.mercari.com"
 
-GET_ITEM_QUANTITY_SCRIPT = "return document.querySelector('#search-result > div > div > div > mer-text').textContent"
+GET_ITEM_QUANTITY_SCRIPT = """
+let items = document.querySelectorAll("#item-grid > ul > li");
+return items.length;
+"""
 
-GET_ITEM_NAME = "return document.querySelector('#item-info > section:nth-child(1) > div > mer-heading').shadowRoot.querySelector('div > div > h1').textContent"
+GET_ITEM_NAME = "return document.querySelector('#item-info > section:nth-child(1) > div.mer-spacing-b-12 > div > div > h1').textContent"
 
-GET_ITEM_PRICE = "return document.querySelector('mer-price').shadowRoot.querySelector('span:nth-of-type(2)').textContent"
+GET_ITEM_PRICE = "return document.querySelector('#item-info > section:nth-child(1) > section:nth-child(2) > div > div > span:nth-child(2)').textContent"
 
 MERCARI_POSTAGE = 175
 
 MERCARI_COMMISSION_RATE = 0.1
 
-ITEM_PRICE_SCRIPT = r"""item_sold_price_list = [];
-        var item_lists =  document.querySelector('#item-grid').querySelectorAll('li > a > mer-item-thumbnail');
-        for (let i = 0; i < item_lists.length; i++) {
-            item_price = item_lists[i].shadowRoot.querySelector('div > figure > div > mer-price');
-            price = item_price.shadowRoot.querySelector('span:nth-of-type(2)').textContent;
-            sold_exist = item_lists[i].shadowRoot.querySelector('div > figure > div:nth-of-type(3)');
-            if (sold_exist !== null){sold = true}else{sold=false}; 
-            if (sold){item_sold_price_list.push(price)};
-        }
-        return item_sold_price_list;"""
+ITEM_PRICE_SCRIPT = r"""
+let pricesList = [];  // 価格を格納するためのリスト
 
-GET_SALES_RATE_SCRIPT = r"""var item_lists =  document.querySelector('#item-grid').querySelectorAll('li > a > mer-item-thumbnail');
+// セレクタを使用してulの中のli要素を取得
+let items = document.querySelectorAll("#item-grid > ul > li");
+
+// 各li要素に対してループを実行
+for (let item of items) {
+    // 各li要素の中の価格を指定するセレクタを使用して取得
+    let priceElement = item.querySelector("div > a > div > figure > div:nth-of-type(3) > div:nth-of-type(2)");
+    
+    // 売り切れの場合priceElementはNoneなので飛ばす
+    if (priceElement !== null){
+        price = priceElement.querySelector("span > span:nth-of-type(2)");
+        pricesList.push(price.textContent.trim());
+    }
+}
+
+// リストを返却
+return pricesList;
+"""
+
+GET_SALES_RATE_SCRIPT = r"""
+let pricesList = [];  // 価格を格納するためのリスト
+
+// セレクタを使用してulの中のli要素を取得
+let items = document.querySelectorAll("#item-grid > ul > li");
 var item_sold_count = 0
-for (let i = 0; i < item_lists.length; i++) {
-            sold_exist = item_lists[i].shadowRoot.querySelector('div > figure > div:nth-of-type(3)');
-            if (sold_exist !== null){item_sold_count++}; 
-        }
-var sales_rate = Math.round((item_sold_count / item_lists.length) * 100);
+// 各li要素に対してループを実行
+for (let item of items) {
+    // 各li要素の中の価格を指定するセレクタを使用して取得
+    let priceElement = item.querySelector("div > a > div > figure > div:nth-of-type(3) > div:nth-of-type(2)");
+    
+    // 売り切れの場合priceElementはNoneなので飛ばす
+    if (priceElement !== null){
+        item_sold_count++;
+    }
+}
+var sales_rate = Math.round((item_sold_count / items.length) * 100);
+// リストを返却
 return sales_rate;
+
 """
 
