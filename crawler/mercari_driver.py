@@ -16,7 +16,7 @@ from logger.utils.custom_logger import Logger
 from .m_configs import GET_NEXT_BUTTON_SCRIPT,\
                     ITEM_PRICE_SCRIPT, GET_ITEM_QUANTITY_SCRIPT,\
                     GET_SALES_RATE_SCRIPT, MERCARI_DEFAULT_URL,\
-                    GET_ITEM_NAME, GET_ITEM_PRICE
+                    GET_ITEM_NAME, GET_ITEM_PRICE,GET_SALES_PRICE
 from selenium import webdriver
 from selenium.webdriver.chrome.service import Service as ChromeService
 from webdriver_manager.chrome import ChromeDriverManager
@@ -209,3 +209,11 @@ class MercariDriver():
         price = price.replace(",", "")
         price = int(price)
         return (name, price)
+    
+    def get_is_sales(self):
+        is_sales = self.driver.execute_script(GET_SALES_PRICE)
+        if is_sales == None:
+            return False
+        else:
+            return True
+

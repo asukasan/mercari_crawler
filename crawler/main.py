@@ -24,6 +24,9 @@ def main(main_url=MERCARI_IT_BOOK_URL, quantity=20, category_id=674, db_name="me
         item_name, item_price = m_crawler.get_name_and_price()
         if item_name is None or item_price is None:
             continue
+        is_sales_item = m_crawler.get_is_sales()
+        if is_sales_item:
+            continue
         item_name_encode = urllib.parse.quote(item_name)
         search_item_url = main_url + "&keyword=" + item_name_encode
 
