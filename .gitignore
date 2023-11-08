@@ -6,5 +6,5 @@ __pycache__/
 .DS_Store
 venv/
 m_crawler_schedule.sh
-logger/log
-.log
+logger/log/
+config/settings.py

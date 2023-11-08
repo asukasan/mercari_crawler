@@ -207,6 +207,7 @@
 2023-11-03 16:48:48 WDM             INFO          Get LATEST chromedriver version for google-chrome
 2023-11-03 16:48:48 WDM             INFO          Get LATEST chromedriver version for google-chrome
 2023-11-03 16:48:48 WDM             INFO          Driver [/Users/ixtab/.wdm/drivers/chromedriver/mac64/118.0.5993.70/chromedriver-mac-x64/chromedriver] found in cache
+<<<<<<< HEAD
 2023-11-04 16:37:23 WDM             INFO          ====== WebDriver manager ======
 2023-11-04 16:37:23 WDM             INFO          Get LATEST chromedriver version for google-chrome
 2023-11-04 16:37:23 WDM             INFO          Get LATEST chromedriver version for google-chrome
@@ -237,3 +238,26 @@
 2023-11-04 16:50:02 WDM             INFO          Get LATEST chromedriver version for google-chrome
 2023-11-04 16:50:02 WDM             INFO          Get LATEST chromedriver version for google-chrome
 2023-11-04 16:50:02 WDM             INFO          Driver [/home/ixtab/.wdm/drivers/chromedriver/linux64/119.0.6045.105/chromedriver-linux64/chromedriver] found in cache
+2023-11-08 16:43:08 WDM             INFO          ====== WebDriver manager ======
+2023-11-08 16:43:15 WDM             INFO          Get LATEST chromedriver version for google-chrome
+2023-11-08 16:43:15 WDM             INFO          Get LATEST chromedriver version for google-chrome
+2023-11-08 16:43:15 WDM             INFO          There is no [mac64] chromedriver "119.0.6045.105" for browser google-chrome "119.0.6045" in cache
+2023-11-08 16:43:15 WDM             INFO          Get LATEST chromedriver version for google-chrome
+2023-11-08 16:43:15 WDM             INFO          WebDriver version 119.0.6045.105 selected
+2023-11-08 16:43:15 WDM             INFO          Modern chrome version https://edgedl.me.gvt1.com/edgedl/chrome/chrome-for-testing/119.0.6045.105/mac-x64/chromedriver-mac-x64.zip
+2023-11-08 16:43:15 WDM             INFO          About to download new driver from https://edgedl.me.gvt1.com/edgedl/chrome/chrome-for-testing/119.0.6045.105/mac-x64/chromedriver-mac-x64.zip
+2023-11-08 16:43:16 WDM             INFO          Driver downloading response is 200
+2023-11-08 16:43:17 WDM             INFO          Get LATEST chromedriver version for google-chrome
+2023-11-08 16:43:17 WDM             INFO          Driver has been saved in cache [/Users/ixtab/.wdm/drivers/chromedriver/mac64/119.0.6045.105]
+2023-11-08 16:44:10 WDM             INFO          ====== WebDriver manager ======
+2023-11-08 16:44:10 WDM             INFO          Get LATEST chromedriver version for google-chrome
+2023-11-08 16:44:11 WDM             INFO          Get LATEST chromedriver version for google-chrome
+2023-11-08 16:44:11 WDM             INFO          Driver [/Users/ixtab/.wdm/drivers/chromedriver/mac64/119.0.6045.105/chromedriver-mac-x64/chromedriver] found in cache
+2023-11-08 16:45:11 WDM             INFO          ====== WebDriver manager ======
+2023-11-08 16:45:11 WDM             INFO          Get LATEST chromedriver version for google-chrome
+2023-11-08 16:45:12 WDM             INFO          Get LATEST chromedriver version for google-chrome
+2023-11-08 16:45:12 WDM             INFO          Driver [/Users/ixtab/.wdm/drivers/chromedriver/mac64/119.0.6045.105/chromedriver-mac-x64/chromedriver] found in cache
+2023-11-08 16:47:49 WDM             INFO          ====== WebDriver manager ======
+2023-11-08 16:47:50 WDM             INFO          Get LATEST chromedriver version for google-chrome
+2023-11-08 16:47:50 WDM             INFO          Get LATEST chromedriver version for google-chrome
+2023-11-08 16:47:50 WDM             INFO          Driver [/Users/ixtab/.wdm/drivers/chromedriver/mac64/119.0.6045.105/chromedriver-mac-x64/chromedriver] found in cache

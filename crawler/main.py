@@ -1,5 +1,7 @@
 import time
 import urllib.parse
+from datetime import timedelta
+from django.utils import timezone
 
 from crawler.notification import notify
 from .mercari_driver import MercariDriver, get_crawler_driver
@@ -24,6 +26,9 @@ def main(main_url=MERCARI_IT_BOOK_URL, quantity=20, category_id=674, db_name="me
         item_name, item_price = m_crawler.get_name_and_price()
         if item_name is None or item_price is None:
             continue
+        is_sales_item = m_crawler.get_is_sales()
+        if is_sales_item:
+            continue
         item_name_encode = urllib.parse.quote(item_name)
         search_item_url = main_url + "&keyword=" + item_name_encode
 
@@ -40,6 +45,15 @@ def main(main_url=MERCARI_IT_BOOK_URL, quantity=20, category_id=674, db_name="me
             continue
         
         if have_prohibit_name(item_name):
+            continue
+        
+        #直近1週間で同じ商品があったら処理を飛ばす
+        # 現在の日時を取得
+        now = timezone.now()
+        # 現在から1週間前の日時を計算
+        one_week_ago = now - timedelta(weeks=1)
+        bargain_items = BargainItem.objects.filter(name=item_name, datetime__gte=one_week_ago)
+        if bargain_items.exists():
             continue
 
         BargainItem.objects.create(
