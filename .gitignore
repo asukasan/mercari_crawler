@@ -8,3 +8,4 @@ venv/
 m_crawler_schedule.sh
 logger/log/
 config/settings.py
+item_management/__init__.py
