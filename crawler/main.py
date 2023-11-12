@@ -52,9 +52,9 @@ def main(main_url=MERCARI_IT_BOOK_URL, quantity=20, category_id=674, db_name="me
         now = timezone.now()
         # 現在から1週間前の日時を計算
         one_week_ago = now - timedelta(weeks=1)
-        bargain_items = BargainItem.objects.filter(name=item_name, datetime__gte=one_week_ago)
-        if bargain_items.exists():
-            continue
+        # bargain_items = BargainItem.objects.filter(name=item_name, datetime__gte=one_week_ago)
+        # if bargain_items.exists():
+        #     continue
 
         BargainItem.objects.create(
             name = item_name,
